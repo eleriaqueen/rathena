@@ -1,2 +1,9 @@
 login_ip: login
 char_ip: 127.0.0.1
+
+//===================================
+// Pincode system
+//===================================
+// A window is opened before you can select your character and you will have to enter a pincode by using only your mouse.
+// Default: yes
+pincode_enabled: no

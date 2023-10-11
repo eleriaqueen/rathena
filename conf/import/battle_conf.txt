@@ -1,0 +1,238 @@
+// --------------
+// --- Battle ---
+// --------------
+
+// Should ammo be unequipped when unequipping a weapon?
+// Official behavior is "yes".
+ammo_unequip: no
+
+// Should a suitable weapon be equipped when equipping ammo?
+// Official behavior is "yes".
+ammo_check_weapon: no
+
+// --------------
+// --- Client ---
+// --------------
+
+// Sorts the character and guild storage before it is sent to the client.
+// Official servers do not sort storage. (Note 1)
+// NOTE: Enabling this option degrades performance.
+client_sort_storage: no
+
+// --------------
+// --- Drops  ---
+// --------------
+
+// The rate the common items are dropped (Items that are in the ETC tab, besides card)
+item_rate_common: 100
+item_rate_common_boss: 100
+item_rate_common_mvp: 100
+
+// The rate healing items are dropped (items that restore HP or SP)
+item_rate_heal: 300
+item_rate_heal_boss: 300
+item_rate_heal_mvp: 300
+
+// The rate at which usable items (in the item tab) other then healing items are dropped.
+item_rate_use: 100
+item_rate_use_boss: 100
+item_rate_use_mvp: 100
+
+// The rate at which equipment is dropped.
+item_rate_equip: 100
+item_rate_equip_boss: 100
+item_rate_equip_mvp: 100
+
+// The rate at which cards are dropped
+item_rate_card: 2500
+item_rate_card_boss: 1000
+item_rate_card_mvp: 1000
+
+// Rate adjustment for Treasure Box drops (these override all other modifiers)
+item_rate_treasure: 200
+
+// --------------
+// ---  Exp   ---
+// --------------
+
+// Rate at which exp. is given. (Note 2)
+base_exp_rate: 600
+
+// Rate at which job exp. is given. (Note 2)
+job_exp_rate: 600
+
+// MVP bonus exp rate. (Note 2)
+mvp_exp_rate: 300
+
+// Rate of base/job exp given by NPCs. (Note 2)
+quest_exp_rate: 300
+
+// Will display experience gained from killing a monster. (Note 1)
+disp_experience: yes
+
+// Will display zeny earned (from mobs, trades, etc) (Note 1)
+disp_zeny: yes
+
+// --------------
+// -- Feature  --
+// --------------
+
+// Itemlink System on informational related commands (Note 1)
+// Generates an itemlink string for an item and can be used for npctalk, message,
+// dispbottom, and broadcast commands. The result is clickable-item name just
+// like from SHIFT+Click from player's inventory/cart/equipment window.
+// Requires: 2015-11-04Ragexe or later
+feature.itemlink: off
+
+// Itemlink System on NPC messages (Note 1)
+// Generates an itemlink string for an item and can be used for NPC's mes command.
+// Requires: 2010-01-01 or later
+feature.mesitemlink: off
+
+// Force all mesitemlinks to be wrapped in brackets (Note 1)
+// Default: no
+feature.mesitemlink_brackets: no
+
+// Force all mesitemlinks to use the database name (Note 1)
+// Default: no
+feature.mesitemlink_dbname: no
+
+// Roulette
+feature.roulette: off
+
+// Achievements
+feature.achievement: off
+
+// --------------
+// --  Guild   --
+// --------------
+
+// When making a guild, an Emperium is consumed? (Note 1)
+guild_emperium_check: no
+
+// --------------
+// --  Homunc  --
+// --------------
+
+// Can you name a homunculus more then once? (Note 1)
+hom_rename: yes
+
+// --------------
+// --   Misc   --
+// --------------
+
+// Forging success rate. (Note 2)
+weapon_produce_rate: 200
+
+// Prepare Potion success rate. (Note 2)
+potion_produce_rate: 200
+
+// --------------
+// --  Items   --
+// --------------
+
+// Is a monster summoned via dead branch aggressive? (Note 1)
+dead_branch_active: no
+
+// --------------
+// --   Misc   --
+// --------------
+
+// Hides items from the player's favorite tab from being sold to a NPC. (Note 1)
+hide_fav_sell: yes
+
+// --------------
+// -- Monster  --
+// --------------
+
+// The HP rate of MVPs. (Note 2)
+mvp_hp_rate: 50
+
+// Zeny from mobs
+zeny_from_mobs: yes
+
+// Delay before the MVP tomb is spawned.
+// Default: 9 seconds
+mvp_tomb_delay: 5000
+
+// Should slaves teleport back to their master if they get too far during chase? (Note 1)
+// Default (Official): no
+slave_stick_with_master: yes
+
+// --------------
+// --  Party   --
+// --------------
+
+// Prevent changing the party leader if the specified player is not on the same map (Note 1)
+change_party_leader_samemap: no
+
+// --------------
+// --   Pet    --
+// --------------
+
+// Rate for catching pets (Note 2)
+pet_catch_rate: 200
+
+// Can you name a pet more then once? (Note 1)
+pet_rename: yes
+
+// --------------
+// --  Player  --
+// --------------
+
+// Players' maximum HP rate? (Default is 100)
+hp_rate: 100
+
+// Players' maximum SP rate? (Default is 100)
+sp_rate: 100
+
+// The amount of HP a player will respawn with, 0 is default.
+// (Unit is in percentage of total HP, 100 is full heal of HP, 0 is respawn with 1HP total.)
+restart_hp_rate: 25
+
+// The amount of SP a player will respawn with, 0 is default.
+// (Unit is in percentage of total SP, 100 is full heal of SP, 0 is respawn with 1SP total.)
+restart_sp_rate: 25
+
+// Maximum HPs depending on base level. Default values are:
+// Lv 99:  330000
+// Lv150:  660000
+// Lv175: 1100000
+max_hp_lv99: 500000
+max_hp_lv150: 1000000
+max_hp: 10000000
+
+// Maximum SP. (Default is 1000000)
+max_sp: 10000000
+
+// --------------
+// --  Skill   --
+// --------------
+
+// Remove trap type
+// 0 = Aegis system : Returns 1 'Trap' item
+// 1 = Athena system : Returns all items used to deploy the trap
+skill_removetrap_type: 1
+
+// Allows players to skip menu when casting Teleport level 1
+// Menu contains two options. "Random" and "Cancel"
+skip_teleport_lv1_menu: yes
+
+// Area of Bowling Bash chain reaction (pre-renewal only)
+// 0: Use official gutter line system
+// 1: Gutter line system without demi gutter bug
+// 2-20: Area around caster (2 = 5x5, 3 = 7x7, 4 = 9x9, ..., 20 = 41x41)
+// Note: If you knock the target out of the area it will only be hit once and won't do splash damage
+bowling_bash_area: 1
+
+// Is the knockback direction for Cart Revolution always West? (Note 1)
+// On official servers it will knock the target always to the West. If disabled it will knock the target backwards.
+cart_revo_knockback: no
+
+// On official servers, Arrow Shower blow direction always rely on skill placed location to target instead of caster to target
+arrow_shower_knockback: no
+
+// Should items that you try to create be dropped if you have no space left in your inventory? (Note 1)
+// Official: no
+// Legacy rAthena logic: yes
+skill_drop_items_full: yes
