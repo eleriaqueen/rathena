@@ -225,3 +225,29 @@ Body:
           Amount: 45
         - Level: 5
           Amount: 50
+  - Id: 5002
+    Name: RA_UNLIMIT
+    Description: Unlimited
+    MaxLevel: 5
+    TargetType: Self
+    DamageFlags:
+      NoDamage: true
+    Hit: Single
+    HitCount: 1
+    AfterCastActDelay: 500
+    Duration1: 150000
+    Cooldown: 200000
+    FixedCastTime: 1000
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 100
+        - Level: 2
+          Amount: 120
+        - Level: 3
+          Amount: 140
+        - Level: 4
+          Amount: 160
+        - Level: 5
+          Amount: 180
+    Status: Unlimit
