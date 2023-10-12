@@ -179,3 +179,49 @@ Body:
     Requires:
       SpCost: 10
     Status: Endure
+  - Id: 367
+    Name: PA_PRESSURE
+    Description: Gloria Domini
+    MaxLevel: 5
+    Type: Magic
+    TargetType: Attack
+    Range: 9
+    Hit: Multi_Hit
+    HitCount: 3
+    Element: Holy
+    CastTime: 1000
+    AfterCastActDelay:
+      - Level: 1
+        Time: 1500
+      - Level: 2
+        Time: 1400
+      - Level: 3
+        Time: 1300
+      - Level: 4
+        Time: 1200
+      - Level: 5
+        Time: 1000
+    Duration2:
+      - Level: 1
+        Time: 2000
+      - Level: 2
+        Time: 3000
+      - Level: 3
+        Time: 4000
+      - Level: 4
+        Time: 5000
+      - Level: 5
+        Time: 6000
+    FixedCastTime: 400
+    Requires:
+      SpCost:
+        - Level: 1
+          Amount: 30
+        - Level: 2
+          Amount: 35
+        - Level: 3
+          Amount: 40
+        - Level: 4
+          Amount: 45
+        - Level: 5
+          Amount: 50
