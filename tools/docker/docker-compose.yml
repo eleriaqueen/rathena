@@ -40,7 +40,7 @@ services:
         ports:
             - "6900:6900" # login server
         volumes:
-            - "../..:/rathena" # mount git repo directory inside container
+            - "../..:/legacy-rathena" # mount git repo directory inside container
             - "./asset/inter_conf.txt:/legacy-rathena/conf/import/inter_conf.txt" # load db connection
             - "./asset/char_conf.txt:/legacy-rathena/conf/import/char_conf.txt"   #localdev login-char relation
             - "./asset/map_conf.txt:/legacy-rathena/conf/import/map_conf.txt"     #localdev char-map relation
