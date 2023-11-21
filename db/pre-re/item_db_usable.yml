@@ -330,7 +330,7 @@ Body:
     AegisName: Royal_Jelly
     Name: Royal Jelly
     Type: Healing
-    Buy: 7000
+    Buy: 2000
     Weight: 150
     Flags:
       BuyingStore: true
@@ -1045,7 +1045,7 @@ Body:
     AegisName: Wing_Of_Butterfly
     Name: Butterfly Wing
     Type: Delayconsume
-    Buy: 300
+    Buy: 100
     Weight: 50
     Flags:
       BuyingStore: true
@@ -1533,17 +1533,17 @@ Body:
     AegisName: Center_Potion
     Name: Concentration Potion
     Type: Usable
-    Buy: 800
+    Buy: 200
     Weight: 100
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_ASPDPOTION0,1800000,0;
+      sc_start SC_ASPDPOTION0,3600000,0;
   - Id: 656
     AegisName: Awakening_Potion
     Name: Awakening Potion
     Type: Usable
-    Buy: 1500
+    Buy: 500
     Weight: 150
     Jobs:
       Alchemist: true
@@ -1572,12 +1572,12 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_ASPDPOTION1,1800000,0;
+      sc_start SC_ASPDPOTION1,3600000,0;
   - Id: 657
     AegisName: Berserk_Potion
     Name: Berserk Potion
     Type: Usable
-    Buy: 3000
+    Buy: 1000
     Weight: 200
     Jobs:
       Alchemist: true
@@ -1597,7 +1597,7 @@ Body:
     Flags:
       BuyingStore: true
     Script: |
-      sc_start SC_ASPDPOTION2,1800000,0;
+      sc_start SC_ASPDPOTION2,3600000,0;
   - Id: 658
     AegisName: Union_Of_Tribe
     Name: Union of Tribe

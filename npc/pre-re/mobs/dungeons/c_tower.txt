@@ -22,14 +22,8 @@ c_tower1,0,0	monster	Bathory	1102,1
 // c_tower2 - Clock Tower F2
 //==================================================
 c_tower2,0,0	monster	Punk	1199,40
-c_tower2,0,0	monster	Clock	1269,40
-c_tower2,0,0	monster	Rideword	1195,7
-c_tower2,128,100,10,10	monster	Rideword	1195,1,60000,30000
-c_tower2,149,199,10,10	monster	Rideword	1195,1,120000,60000
-c_tower2,149,199,10,10	monster	Rideword	1195,1,300000,120000
-c_tower2,273,286,20,20	monster	Rideword	1195,1,120000,60000
-c_tower2,273,286,20,20	monster	Rideword	1195,1,300000,120000
-c_tower2,0,0	monster	Mimic	1191,3
+c_tower2,0,0	monster	Clock	1269,120
+c_tower2,0,0	monster	Rideword	1195,5
 c_tower2,0,0	monster	Clock Tower Manager	1270,1
 c_tower2,0,0	monster	Elder	1377,1,3600000,1800000
 c_tower2,0,0	monster	Elder	1377,1,3600000,1800000
@@ -37,10 +31,9 @@ c_tower2,0,0	monster	Elder	1377,1,3600000,1800000
 //==================================================
 // c_tower3 - Clock Tower F3
 //==================================================
-c_tower3,0,0	monster	Alarm	1193,80
+c_tower3,0,0	monster	Alarm	1193,150
 c_tower3,0,0	monster	Rideword	1195,5
-c_tower3,153,220,10,10	monster	Rideword	1195,1,126000,100000
-c_tower3,0,0	monster	Mimic	1191,7
+c_tower3,0,0	monster	Mimic	1191,5
 c_tower3,0,0	monster	Clock Tower Manager	1270,3
 
 //==================================================

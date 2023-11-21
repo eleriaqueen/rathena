@@ -3887,17 +3887,13 @@ int64 skill_attack (int attack_type, struct block_list* src, struct block_list *
 			break;
 		case HT_CLAYMORETRAP:
 		case HT_BLASTMINE:
+		case HT_LANDMINE:
 		case HT_FLASHER:
 		case HT_FREEZINGTRAP:
 		case RA_CLUSTERBOMB:
 		case RA_FIRINGTRAP:
 		case RA_ICEBOUNDTRAP:
 			dmg.dmotion = clif_skill_damage(src, bl, tick, dmg.amotion, dmg.dmotion, damage, dmg.div_, skill_id, (flag&SD_LEVEL) ? -1 : skill_lv, DMG_SPLASH);
-			if( dsrc != src ) // avoid damage display redundancy
-				break;
-			//Fall through
-		case HT_LANDMINE:
-			dmg.dmotion = clif_skill_damage(dsrc,bl,tick, dmg.amotion, dmg.dmotion, damage, dmg.div_, skill_id, -1, dmg_type);
 			break;
 		case WZ_SIGHTBLASTER:
 			//Sightblaster should never call clif_skill_damage twice
@@ -15932,12 +15928,6 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 				status_change_start(ss,bl,type,10000,sg->skill_lv,sg->src_id,0,0,skill_get_time2(sg->skill_id,sg->skill_lv),SCSTART_NONE);
 			break;
 
-		case UNT_LANDMINE:
-			//Land Mine only hits single target
-			skill_attack(skill_get_type(sg->skill_id),ss,&unit->bl,bl,sg->skill_id,sg->skill_lv,tick,0);
-			sg->unit_id = UNT_USED_TRAPS; //Changed ID so it does not invoke a for each in area again.
-			sg->limit = 1500;
-			break;
 		case UNT_MAGENTATRAP:
 		case UNT_COBALTTRAP:
 		case UNT_MAIZETRAP:
@@ -15949,6 +15939,7 @@ int skill_unit_onplace_timer(struct skill_unit *unit, struct block_list *bl, t_t
 		case UNT_CLUSTERBOMB:
 			if( bl->id == ss->id )// it won't trigger on caster
 				break;
+		case UNT_LANDMINE:
 		case UNT_BLASTMINE:
 		case UNT_SHOCKWAVE:
 		case UNT_SANDMAN:
@@ -18691,6 +18682,8 @@ struct s_skill_condition skill_get_requirement(map_session_data* sd, uint16 skil
 	// Check for cost reductions due to skills & SCs
 	switch(skill_id) {
 		case MC_MAMMONITE:
+			req.zeny /= 10;
+
 #ifdef RENEWAL
 		case WS_CARTTERMINATION:
 #endif

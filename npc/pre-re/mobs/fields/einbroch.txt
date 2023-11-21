@@ -124,10 +124,8 @@ ein_fild08,0,0	monster	Red Mushroom	1085,10,120000,60000
 //==================================================
 // ein_fild09 - Einbroch Field
 //==================================================
-ein_fild09,0,0	monster	Metaling	1613,10
-ein_fild09,0,0	monster	Porcellio	1619,70
-ein_fild09,0,0	monster	Thief Bug	1051,20
-ein_fild09,100,260,2,2	monster	Thief Bug Egg	1048,3,600000,300000
+ein_fild09,0,0	monster	Metaling	1613,5
+ein_fild09,0,0	monster	Porcellio	1619,100
 ein_fild09,0,0	monster	Red Plant	1078,10,120000,60000
 ein_fild09,0,0	monster	Yellow Plant	1081,10,120000,60000
 ein_fild09,0,0	monster	Red Mushroom	1085,10,120000,60000

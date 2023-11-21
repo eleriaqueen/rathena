@@ -927,6 +927,16 @@ void clif_dropflooritem( struct flooritem_data* fitem, bool canShowEffect ){
 		p.dropeffectmode = DROPEFFECT_NONE;
 	}
 #endif
+#if defined(PRERE) && PACKETVER >= 20180418
+	if (p.type == IT_CARD) {
+		p.showdropeffect = 1;
+		p.dropeffectmode = DROPEFFECT_RED_PILLAR - 1;
+	}else{
+		p.showdropeffect = 0;
+		p.dropeffectmode = DROPEFFECT_NONE;
+	}
+#endif // Custom pillar for Pre-Re card drops
+	
 	clif_send( &p, sizeof(p), &fitem->bl, AREA );
 }
 

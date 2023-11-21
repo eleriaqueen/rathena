@@ -1843,25 +1843,25 @@ Body:
     SplashArea: 3
     Duration1:
       - Level: 1
-        Time: 60000
-      - Level: 2
         Time: 80000
-      - Level: 3
-        Time: 100000
-      - Level: 4
-        Time: 120000
-      - Level: 5
-        Time: 140000
-      - Level: 6
+      - Level: 2
         Time: 160000
-      - Level: 7
-        Time: 180000
-      - Level: 8
-        Time: 200000
-      - Level: 9
-        Time: 220000
-      - Level: 10
+      - Level: 3
         Time: 240000
+      - Level: 4
+        Time: 320000
+      - Level: 5
+        Time: 400000
+      - Level: 6
+        Time: 480000
+      - Level: 7
+        Time: 560000
+      - Level: 8
+        Time: 640000
+      - Level: 9
+        Time: 720000
+      - Level: 10
+        Time: 800000
     Requires:
       SpCost:
         - Level: 1
@@ -4175,6 +4175,7 @@ Body:
     Type: Misc
     TargetType: Ground
     DamageFlags:
+      Splash: true
       IgnoreFlee: true
       IgnoreDefCard: true
     Flags:
@@ -4182,10 +4183,11 @@ Body:
       AlterRangeResearchTrap: true
       IgnoreHovering: true
       AllowOnWarg: true
-    Range: 3
+    Range: 5
     Hit: Single
     HitCount: 1
     Element: Earth
+    SplashArea: 3
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -4203,7 +4205,7 @@ Body:
         Time: 40000
     Duration2: 5000
     Requires:
-      SpCost: 10
+      SpCost: 20
       ItemCost:
         - Item: Booby_Trap
           Amount: 1
@@ -4475,11 +4477,11 @@ Body:
       AlterRangeResearchTrap: true
       IgnoreHovering: true
       AllowOnWarg: true
-    Range: 3
+    Range: 5
     Hit: Single
     HitCount: 1
     Element: Wind
-    SplashArea: 1
+    SplashArea: 3
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -4496,7 +4498,7 @@ Body:
       - Level: 5
         Time: 5000
     Requires:
-      SpCost: 10
+      SpCost: 20
       ItemCost:
         - Item: Booby_Trap
           Amount: 1
@@ -4525,11 +4527,11 @@ Body:
       AlterRangeResearchTrap: true
       IgnoreHovering: true
       AllowOnWarg: true
-    Range: 3
+    Range: 5
     Hit: Single
     HitCount: 1
     Element: Fire
-    SplashArea: 2
+    SplashArea: 4
     CopyFlags:
       Skill:
         Plagiarism: true
@@ -4546,7 +4548,7 @@ Body:
       - Level: 5
         Time: 100000
     Requires:
-      SpCost: 15
+      SpCost: 30
       ItemCost:
         - Item: Booby_Trap
           Amount: 2

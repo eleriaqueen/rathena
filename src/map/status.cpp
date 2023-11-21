@@ -3437,7 +3437,7 @@ static unsigned int status_calc_maxhpsp_pc(map_session_data* sd, unsigned int st
 
 	if (isHP) { //Calculates MaxHP
 		double equip_bonus = 0, item_bonus = 0;
-		dmax = job->base_hp[level-1] * (1 + (umax(stat,1) * 0.01)) * ((sd->class_&JOBL_UPPER)?1.25:(pc_is_taekwon_ranker(sd))?3:1);
+		dmax = job->base_hp[level-1] * (1 + (umax(stat,1) * 0.03)) * ((sd->class_&JOBL_UPPER)?1.5:(pc_is_taekwon_ranker(sd))?3:1);
 		dmax += sd->indexed_bonus.param_equip[PARAM_VIT]; //Vit from equip gives +1 additional HP
 		dmax += status_get_hpbonus(&sd->bl,STATUS_BONUS_FIX);
 		equip_bonus = (dmax * status_get_hpbonus_equip(sd) / 100);
@@ -5197,6 +5197,7 @@ void status_calc_regen(struct block_list *bl, struct status_data *status, struct
 
 		if( (skill=pc_checkskill(sd,TK_HPTIME)) > 0 && sd->state.rest )
 			val += skill*30 + skill*status->max_hp/500;
+		val += status->max_hp * 50 / 100; // Custom 50% HP regen ticks every ~8s when sitting
 		sregen->hp = cap_value(val, 0, SHRT_MAX);
 
 		val = 0;
@@ -5207,6 +5208,7 @@ void status_calc_regen(struct block_list *bl, struct status_data *status, struct
 		}
 		if( (skill=pc_checkskill(sd,MO_SPIRITSRECOVERY)) > 0 )
 			val += skill*2 + skill*status->max_sp/500;
+		val += status->max_sp* 50 / 100; // Custom 50% SP regen ticks every ~8s when sitting
 		sregen->sp = cap_value(val, 0, SHRT_MAX);
 	}
 

@@ -1877,7 +1877,7 @@ Body:
     AegisName: Booby_Trap
     Name: Trap
     Type: Etc
-    Buy: 100
+    Buy: 25
     Weight: 10
     Flags:
       BuyingStore: true

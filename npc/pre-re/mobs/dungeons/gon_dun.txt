@@ -14,9 +14,9 @@
 //==================================================
 // gon_dun01 - Shrine of Kunlun Queen
 //==================================================
-gon_dun01,0,0	monster	Bloody Butterfly	1408,55,650000,350000
-gon_dun01,0,0	monster	Enchanted Peach Tree	1410,35
-gon_dun01,0,0	monster	Zipper Bear	1417,30
+gon_dun01,0,0	monster	Bloody Butterfly	1408,50,650000,350000
+gon_dun01,0,0	monster	Enchanted Peach Tree	1410,50
+gon_dun01,0,0	monster	Zipper Bear	1417,50
 gon_dun01,0,0	monster	Red Plant	1078,5
 gon_dun01,0,0	monster	Yellow Plant	1081,10
 gon_dun01,0,0	monster	White Plant	1082,10

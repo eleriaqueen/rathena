@@ -8376,13 +8376,16 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 #else
 		case HT_LANDMINE:
 		case MA_LANDMINE:
-			md.damage = skill_lv * (sstatus->dex + 75) * (100 + sstatus->int_) / 100;
+			md.damage = skill_lv * (sstatus->dex + 50) * (35 + 2 * sstatus->int_) * 3 / 2 / 100;
+			md.damage += md.damage * (rnd()%20 - 10) / 100;
 			break;
 		case HT_BLASTMINE:
-			md.damage = skill_lv * (sstatus->dex / 2 + 50) * (100 + sstatus->int_) / 100;
+			md.damage = skill_lv * (sstatus->dex + 50) * (35 + 2 * sstatus->int_) * 3 / 2 / 100;
+			md.damage += md.damage * (rnd()%20 - 10) / 100;
 			break;
 		case HT_CLAYMORETRAP:
-			md.damage = skill_lv * (sstatus->dex / 2 + 75) * (100 + sstatus->int_) / 100;
+			md.damage = skill_lv * (sstatus->dex + 50) * (35 + 2 * sstatus->int_) * 3 / 2 / 100;
+			md.damage += md.damage * (rnd()%20 - 10) / 100;
 			break;
 #endif
 		case HT_BLITZBEAT:
@@ -8395,11 +8398,13 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 					skill = 0;
 #ifdef RENEWAL
 				md.damage = (sstatus->dex / 10 + sstatus->agi / 2 + skill * 3 + 40) * 2;
+				md.damage += md.damage * (rnd()%20 - 10) / 100;
 				RE_LVL_MDMOD(100);
 #else
-				md.damage = (sstatus->dex / 10 + sstatus->int_ / 2 + skill * 3 + 40) * 2;
-				if(mflag > 1) //Autocasted Blitz
-					nk.set(NK_SPLASHSPLIT);
+				md.damage = (sstatus->dex / 5 + sstatus->agi / 2 + skill * 3 + 40) * 2;
+				md.damage += md.damage * (rnd()%20 - 10) / 100;
+//				if(mflag > 1) //Autocasted Blitz
+//					nk.set(NK_SPLASHSPLIT);
 #endif
 				if (skill_id == SN_FALCONASSAULT) {
 					//Div fix of Blitzbeat
