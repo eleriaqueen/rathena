@@ -171,7 +171,7 @@ switch(select("- Select Equipment:- Information:"+ ( (.enchant_restrict)?"- Rest
 				}
 				set .@ropt_m$,""; // Clearing the menu before generating a new one
 				next;
-				switch(select( ( (.@ropt_weap && !.@ropt_wele)?"Weapon Element":"")+":"+ ( (.@ropt_arm && !.@ropt_aele)?"Armor Element":"")+":Attribute:"+( (.@ropt_weap)?"Increase Damage":"")+":"+( (.@ropt_arm)?"Defensive":"")+":Special")) {
+				switch(select( ( (.@ropt_weap && !.@ropt_wele)?"Weapon Element":"")+":"+ ( (.@ropt_arm && !.@ropt_aele)?"Armor Element":"")+":Attribute:"+( (.@ropt_weap)?"Increase Damage":"")+":"+( (.@ropt_arm)?"Defensive":""))) {
 
 					// Weapon Element
 					case 1:
@@ -314,45 +314,6 @@ switch(select("- Select Equipment:- Information:"+ ( (.enchant_restrict)?"- Rest
 					set .@ropt_val,rand(getd(".RandOpt_"+.@def_t$+"["+(.@i+1)+"]"),getd(".RandOpt_"+.@def_t$+"["+(.@i+2)+"]"));
 					break;
 
-					// Special
-					case 6:
-					mes .n$;
-					if(.slot[.@e+19] == 1) { // Selectable Enchantment
-						mes "Please select the Enchantment you want to use:";
-						next;
-						for ( set .@l,0; .@l < getarraysize(.RandOpt_Spec_M$); set .@l,.@l + 1)
-							set .@ropt_m$,.@ropt_m$ + ( ((.RandOpt_Spec[(.@l+1)*3-3] == RDMOPT_BODY_INDESTRUCTIBLE && getiteminfo(.@id,2) != 4) || (.RandOpt_Spec[(.@l+1)*3-3] == RDMOPT_WEAPON_INDESTRUCTIBLE && getiteminfo(.@id,2) != 5) || (.RandOpt_Spec[(.@l+1)*3-3] == RDMOPT_DAMAGE_SIZE_PERFECT && getiteminfo(.@id,2) != 5) )?"":"- "+.RandOpt_Spec_M$[.@l]) + ( (.RandOpt_Spec_M$[.@l+1] != "")?":":"");
-
-						set .@t,select(.@ropt_m$);
-						mes .n$;
-						if(.RandOpt_Spec_Limit && .@ropt_spec_l[.@t-1] == 1) {
-							mes "I'm sorry, but you already chose this Random Option. Please select a different one.";
-							continue;
-						}
-
-					} else { // Random Selection
-						while(1) {
-							set .@t,rand(1,getarraysize(.RandOpt_Spec_M$));
-							// Checking if certain Enchantments are suited for the Item Type and if they are in use already or not:
-
-							// "Armor - Instructible in Battle" and can only be used on Armors, so no Shoes, Garments, Headgears and Shields
-							if(.RandOpt_Spec[.@t*3-3] == RDMOPT_BODY_INDESTRUCTIBLE && (getiteminfo(.@id,2) != 4 || getiteminfo(.@id,5) != 16) ) continue;
-							// Weapon - "Instructible in Battle"
-							if(.RandOpt_Spec[.@t*3-3] == RDMOPT_WEAPON_INDESTRUCTIBLE && getiteminfo(.@id,2) != 5 ) continue;
-							if(.RandOpt_Spec[.@t*3-3] == RDMOPT_DAMAGE_SIZE_PERFECT && getiteminfo(.@id,2) != 5) continue;
-							// Check if they are already used
-							if(.@ropt_spec_l[.@t-1] == 1) continue;
-							break;
-						}
-					}
-					// Save current Random Option for it's usage, if the Limitation is enabled
-					if(.RandOpt_Spec_Limit)
-						setarray .@ropt_spec_l[.@t-1],1;
-					set .@i,.@t*3-3;
-					mes "Defensive Option: "+.RandOpt_Spec_M$[.@t-1];
-					set .@ropt_id,.RandOpt_Spec[.@i];
-					set .@ropt_val,rand(.RandOpt_Spec[.@i+1],.RandOpt_Spec[.@i+2]);
-					break;
 				}
 				// Creating values for the respective random option ID
 				setarray .@OptID[.@ropt],.@ropt_id;
@@ -550,16 +511,16 @@ set .n$,"["+strnpcinfo(0)+"]";
 // [23] = Amount of Price
 setarray .slot[0],
 // Index: 	0				1	2 3 4	5 6 7 	8 9    10	11			12 	13	14	15	16	17	18	19	20	21		22	23
-	EQI_HEAD_TOP,			1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	25000, // Top Headgear
-	EQI_HEAD_MID,			1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	50000,	1,	25000, // Middle Headgear
-	EQI_HEAD_LOW,			1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	50000,	1,	25000, // Lower Headgear
-	EQI_ARMOR,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	25000, // Armor
-	EQI_HAND_R,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	1,	1,	0,	1,	0,	1,	25000,	1,	25000, // Weapon
-	EQI_HAND_L,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	25000, // Shield
-	EQI_GARMENT,			1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	25000, // Garment
-	EQI_SHOES,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	25000, // Shoes
-	EQI_ACC_R,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	50000,	1,	25000, // Accessory Right
-	EQI_ACC_L,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	50000,	1,	25000, // Accessory Left
+	EQI_HEAD_TOP,			1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	10000, // Top Headgear
+	EQI_HEAD_MID,			1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	10000, // Middle Headgear
+	EQI_HEAD_LOW,			1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	10000, // Lower Headgear
+	EQI_ARMOR,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	10000, // Armor
+	EQI_HAND_R,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	1,	1,	0,	1,	0,	1,	25000,	1,	10000, // Weapon
+	EQI_HAND_L,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	10000, // Shield
+	EQI_GARMENT,			1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	10000, // Garment
+	EQI_SHOES,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	10000, // Shoes
+	EQI_ACC_R,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	10000, // Accessory Right
+	EQI_ACC_L,				1,	1,0,2,	0,0,2,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	25000,	1,	10000, // Accessory Left
 	EQI_COSTUME_HEAD_TOP,	1,	0,0,1,	0,0,1,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	1000000,	1,	50000, // Costume Top Headgear
 	EQI_COSTUME_HEAD_MID,	1,	0,0,1,	0,0,1,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	1000000,	1,	50000, // Costume Middle Headgear
 	EQI_COSTUME_HEAD_LOW,	1,	0,0,1,	0,0,1,	0,0,	1,	5000000,	1,	0,	0,	0,	1,	0,	1,	0,	1,	1000000,	1,	50000, // Costume Lower Headgear
@@ -884,8 +845,8 @@ setarray .RandOpt_PDMG_SC[0],
 		RDMOPT_DAMAGE_SIZE_LARGE_TARGET,1,20,			// Physical Damage to Large Targets
 		RDMOPT_CLASS_DAMAGE_NORMAL_TARGET,1,20,			// Physical Damage to Normal Targets
 		RDMOPT_CLASS_DAMAGE_BOSS_TARGET,1,20,			// Physical Damage to Boss Targets
-		RDMOPT_CLASS_IGNORE_DEF_PERCENT_NORMAL,1,5,	// Bypass DEF of Normal Targets
-		RDMOPT_CLASS_IGNORE_DEF_PERCENT_BOSS,1,5; 		// Bypass DEF of Boss Targets
+		RDMOPT_CLASS_IGNORE_DEF_PERCENT_NORMAL,1,10,	// Bypass DEF of Normal Targets
+		RDMOPT_CLASS_IGNORE_DEF_PERCENT_BOSS,1,10; 		// Bypass DEF of Boss Targets
 setarray .RandOpt_PDMG_SC_M$[0],"Damage vs Small Size","Damage vs Medium Size","Damage vs Large Size","Damage vs Normal class","Damage vs Boss class","Bypass DEF of Normal class","Bypass DEF of Boss class";
 
 // - Magical Damage vs Element
@@ -914,16 +875,16 @@ setarray .RandOpt_MDMG_RC[0],
 		RDMOPT_RACE_MDAMAGE_HUMAN,1,25,					// Magical Damage to Human Race
 		RDMOPT_RACE_MDAMAGE_ANGEL,1,25,					// Magical Damage to Angel Race
 		RDMOPT_RACE_MDAMAGE_DRAGON,1,25,				// Magical Damage to Dragon Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_NOTHING,1,5,	// Bypass MDEF of Neutral Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_UNDEAD,1,5,	// Bypass MDEF of Undead Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_ANIMAL,1,5,	// Bypass MDEF of Animal Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_PLANT,1,5,		// Bypass MDEF of Plant Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_INSECT,1,5,	// Bypass MDEF of Insect Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_FISHS,1,5,		// Bypass MDEF of Fish Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_DEVIL,1,5,		// Bypass MDEF of Demon Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_HUMAN,1,5,		// Bypass MDEF of Human Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_ANGEL,1,5,		// Bypass MDEF of Angel Race
-		RDMOPT_RACE_IGNORE_MDEF_PERCENT_DRAGON,1,5;	// Bypass MDEF of Dragon Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_NOTHING,1,10,	// Bypass MDEF of Neutral Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_UNDEAD,1,10,	// Bypass MDEF of Undead Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_ANIMAL,1,10,	// Bypass MDEF of Animal Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_PLANT,1,10,		// Bypass MDEF of Plant Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_INSECT,1,10,	// Bypass MDEF of Insect Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_FISHS,1,10,		// Bypass MDEF of Fish Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_DEVIL,1,10,		// Bypass MDEF of Demon Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_HUMAN,1,10,		// Bypass MDEF of Human Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_ANGEL,1,10,		// Bypass MDEF of Angel Race
+		RDMOPT_RACE_IGNORE_MDEF_PERCENT_DRAGON,1,10;	// Bypass MDEF of Dragon Race
 setarray .RandOpt_MDMG_RC_M$[0],"Damage vs Formless","Damage vs Undead","Damage vs Animal","Damage vs Plant","Damage vs Insect","Damage vs Fish","Damage vs Demon","Damage vs Human","Damage vs Angel","Damage vs Dragon",
 								"Bypass MDEF of Formless","Bypass MDEF of Undead","Bypass MDEF of Animal","Bypass MDEF of Plant","Bypass MDEF of Insect","Bypass MDEF of Fish","Bypass MDEF of Demon","Bypass MDEF of Human","Bypass MDEF of Angel","Bypass MDEF of Dragon";
 
@@ -940,51 +901,51 @@ setarray .RandOpt_MDMG_SC_M$[0],"Damage vs Small Size","Damage vs Medium Size","
 
 // - Physical Resistances
 setarray .RandOpt_RES_P[0],
-		RDMOPT_DAMAGE_PROPERTY_NOTHING_USER,1,15,	 	// Physical Damage Reduction from Neutral Element
-		RDMOPT_DAMAGE_PROPERTY_GROUND_USER,1,15,	 	// Physical Damage Reduction from Earth Element
-		RDMOPT_DAMAGE_PROPERTY_FIRE_USER,1,15,			// Physical Damage Reduction from Fire Element
-		RDMOPT_DAMAGE_PROPERTY_WATER_USER,1,15,	 		// Physical Damage Reduction from Water Element
-		RDMOPT_DAMAGE_PROPERTY_WIND_USER,1,15,			// Physical Damage Reduction from Wind Element
-		RDMOPT_DAMAGE_PROPERTY_POISON_USER,1,15,	 	// Physical Damage Reduction from Poison Element
-		RDMOPT_DAMAGE_PROPERTY_SAINT_USER,1,15,	 		// Physical Damage Reduction from Holy Element
-		RDMOPT_DAMAGE_PROPERTY_DARKNESS_USER,1,15,		// Physical Damage Reduction from Shadow Element
-		RDMOPT_DAMAGE_PROPERTY_TELEKINESIS_USER,1,15,	// Physical Damage Reduction from Ghost Element
-		RDMOPT_DAMAGE_PROPERTY_UNDEAD_USER,1,15;		// Physical Damage Reduction from Undead Element
+		RDMOPT_DAMAGE_PROPERTY_NOTHING_USER,1,5,	 	// Physical Damage Reduction from Neutral Element
+		RDMOPT_DAMAGE_PROPERTY_GROUND_USER,1,5,	 	// Physical Damage Reduction from Earth Element
+		RDMOPT_DAMAGE_PROPERTY_FIRE_USER,1,5,			// Physical Damage Reduction from Fire Element
+		RDMOPT_DAMAGE_PROPERTY_WATER_USER,1,5,	 		// Physical Damage Reduction from Water Element
+		RDMOPT_DAMAGE_PROPERTY_WIND_USER,1,5,			// Physical Damage Reduction from Wind Element
+		RDMOPT_DAMAGE_PROPERTY_POISON_USER,1,5,	 	// Physical Damage Reduction from Poison Element
+		RDMOPT_DAMAGE_PROPERTY_SAINT_USER,1,5,	 		// Physical Damage Reduction from Holy Element
+		RDMOPT_DAMAGE_PROPERTY_DARKNESS_USER,1,5,		// Physical Damage Reduction from Shadow Element
+		RDMOPT_DAMAGE_PROPERTY_TELEKINESIS_USER,1,5,	// Physical Damage Reduction from Ghost Element
+		RDMOPT_DAMAGE_PROPERTY_UNDEAD_USER,1,5;		// Physical Damage Reduction from Undead Element
 setarray .RandOpt_RES_P_M$[0],"Reduction from Neutral Element","Reduction from Earth Element","Reduction from Fire Element","Reduction from Water Element","Reduction from Wind Element","Reduction from Poison Element","Reduction from Holy Element","Reduction from Shadow Element","Reduction from Ghost Element","Reduction from Undead";
 
 // - Magical Resistances
 setarray .RandOpt_RES_M[0],
-		RDMOPT_MDAMAGE_PROPERTY_NOTHING_USER,1,15,		// Magical Damage Reduction from Neutral Element
-		RDMOPT_MDAMAGE_PROPERTY_GROUND_USER,1,15,	 	// Magical Damage Reduction from Earth Element
-		RDMOPT_MDAMAGE_PROPERTY_FIRE_USER,1,15,	 		// Magical Damage Reduction from Fire Element
-		RDMOPT_MDAMAGE_PROPERTY_WATER_USER,1,15,	 	// Magical Damage Reduction from Water Element
-		RDMOPT_MDAMAGE_PROPERTY_WIND_USER,1,15,	 		// Magical Damage Reduction from Wind Element
-		RDMOPT_MDAMAGE_PROPERTY_POISON_USER,1,15,		// Magical Damage Reduction from Poison Element
-		RDMOPT_MDAMAGE_PROPERTY_SAINT_USER,1,15,		// Magical Damage Reduction from Holy Element
-		RDMOPT_MDAMAGE_PROPERTY_DARKNESS_USER,1,15,		// Magical Damage Reduction from Shadow Element
-		RDMOPT_MDAMAGE_PROPERTY_TELEKINESIS_USER,1,15,	// Magical Damage Reduction from Ghost Element
-		RDMOPT_MDAMAGE_PROPERTY_UNDEAD_USER,1,15;	 	// Magical Damage Reduction from Undead Element
+		RDMOPT_MDAMAGE_PROPERTY_NOTHING_USER,1,5,		// Magical Damage Reduction from Neutral Element
+		RDMOPT_MDAMAGE_PROPERTY_GROUND_USER,1,5,	 	// Magical Damage Reduction from Earth Element
+		RDMOPT_MDAMAGE_PROPERTY_FIRE_USER,1,5,	 		// Magical Damage Reduction from Fire Element
+		RDMOPT_MDAMAGE_PROPERTY_WATER_USER,1,5,	 	// Magical Damage Reduction from Water Element
+		RDMOPT_MDAMAGE_PROPERTY_WIND_USER,1,5,	 		// Magical Damage Reduction from Wind Element
+		RDMOPT_MDAMAGE_PROPERTY_POISON_USER,1,5,		// Magical Damage Reduction from Poison Element
+		RDMOPT_MDAMAGE_PROPERTY_SAINT_USER,1,5,		// Magical Damage Reduction from Holy Element
+		RDMOPT_MDAMAGE_PROPERTY_DARKNESS_USER,1,5,		// Magical Damage Reduction from Shadow Element
+		RDMOPT_MDAMAGE_PROPERTY_TELEKINESIS_USER,1,5,	// Magical Damage Reduction from Ghost Element
+		RDMOPT_MDAMAGE_PROPERTY_UNDEAD_USER,1,5;	 	// Magical Damage Reduction from Undead Element
 setarray .RandOpt_RES_M_M$[0],"Reduction from Neutral Element","Reduction from Earth Element","Reduction from Fire Element","Reduction from Water Element","Reduction from Wind Element","Reduction from Poison Element","Reduction from Holy Element","Reduction from Shadow Element","Reduction from Ghost Element","Reduction from Undead";
 
 // - Resistances vs Race, Size, Class, Ranged and Critical Attacks
 setarray .RandOpt_RES_ETC[0],
-		RDMOPT_RACE_TOLERACE_NOTHING,1,15,				// Damage Reduction from Formless Race
-		RDMOPT_RACE_TOLERACE_UNDEAD,1,15,				// Damage Reduction from Undead Race
-		RDMOPT_RACE_TOLERACE_ANIMAL,1,15,				// Damage Reduction from Animal Race
-		RDMOPT_RACE_TOLERACE_PLANT,1,15,				// Damage Reduction from Plant Race
-		RDMOPT_RACE_TOLERACE_INSECT,1,15,				// Damage Reduction from Insect Race
-		RDMOPT_RACE_TOLERACE_FISHS,1,15,				// Damage Reduction from Fish Race
-		RDMOPT_RACE_TOLERACE_DEVIL,1,15,				// Damage Reduction from Demon Race
-		RDMOPT_RACE_TOLERACE_HUMAN,1,15,				// Damage Reduction from Human Race
-		RDMOPT_RACE_TOLERACE_ANGEL,1,15,				// Damage Reduction from Angel Race
-		RDMOPT_RACE_TOLERACE_DRAGON,1,15,				// Damage Reduction from Dragon Race
-		RDMOPT_CLASS_DAMAGE_NORMAL_USER,1,15,			// Damage Reduction from Normal Targets
-		RDMOPT_CLASS_DAMAGE_BOSS_USER,1,15,				// Damage Reduction from Boss Targets
-		RDMOPT_DAMAGE_SIZE_SMALL_USER,1,15,				// Damage Reduction from Small Targets
-		RDMOPT_DAMAGE_SIZE_MIDIUM_USER,1,15,			// Damage Reduction from Medium Targets
-		RDMOPT_DAMAGE_SIZE_LARGE_USER,1,15,				// Damage Reduction from Large Targets
-		RDMOPT_RANGE_ATTACK_DAMAGE_USER,1,15,			// Damage Reduction from Ranged Attacks
-		RDMOPT_DAMAGE_CRI_USER,1,15;					// Damage Reduction from Critical Attacks
+		RDMOPT_RACE_TOLERACE_NOTHING,1,5,				// Damage Reduction from Formless Race
+		RDMOPT_RACE_TOLERACE_UNDEAD,1,5,				// Damage Reduction from Undead Race
+		RDMOPT_RACE_TOLERACE_ANIMAL,1,5,				// Damage Reduction from Animal Race
+		RDMOPT_RACE_TOLERACE_PLANT,1,5,				// Damage Reduction from Plant Race
+		RDMOPT_RACE_TOLERACE_INSECT,1,5,				// Damage Reduction from Insect Race
+		RDMOPT_RACE_TOLERACE_FISHS,1,5,				// Damage Reduction from Fish Race
+		RDMOPT_RACE_TOLERACE_DEVIL,1,5,				// Damage Reduction from Demon Race
+		RDMOPT_RACE_TOLERACE_HUMAN,1,5,				// Damage Reduction from Human Race
+		RDMOPT_RACE_TOLERACE_ANGEL,1,5,				// Damage Reduction from Angel Race
+		RDMOPT_RACE_TOLERACE_DRAGON,1,5,				// Damage Reduction from Dragon Race
+		RDMOPT_CLASS_DAMAGE_NORMAL_USER,1,5,			// Damage Reduction from Normal Targets
+		RDMOPT_CLASS_DAMAGE_BOSS_USER,1,5,				// Damage Reduction from Boss Targets
+		RDMOPT_DAMAGE_SIZE_SMALL_USER,1,5,				// Damage Reduction from Small Targets
+		RDMOPT_DAMAGE_SIZE_MIDIUM_USER,1,5,			// Damage Reduction from Medium Targets
+		RDMOPT_DAMAGE_SIZE_LARGE_USER,1,5,				// Damage Reduction from Large Targets
+		RDMOPT_RANGE_ATTACK_DAMAGE_USER,1,5,			// Damage Reduction from Ranged Attacks
+		RDMOPT_DAMAGE_CRI_USER,1,5;					// Damage Reduction from Critical Attacks
 setarray .RandOpt_RES_ETC_M$[0],"Reduction from Formless Race","Reduction from Undead Race","Reduction from Animal Race","Reduction from Plant Race","Reduction from Insect Race","Reduction from Fish Race","Reduction from Demon Race","Reduction from Human Race","Reduction from Angel Race","Reduction from Dragon Race","Reduction from Normal Targets","Reduction from Boss Targets","Reduction from Small Targets","Reduction from Medium Targets","Reduction from Large Targets","Reduction from Ranged Attacks","Reduction from Critical Attacks";
 
 // - Weapon Elements
@@ -1023,37 +984,24 @@ setarray .RandOpt_ATT[0],
 		RDMOPT_VAR_INTAMOUNT,1,3,				// INT
 		RDMOPT_VAR_DEXAMOUNT,1,3,				// DEX
 		RDMOPT_VAR_LUKAMOUNT,1,3,				// LUK
-		RDMOPT_VAR_ATTPOWER,1,50,				// ATK
-		RDMOPT_VAR_ATKPERCENT,1,25,			// ATK %
-		RDMOPT_VAR_ATTMPOWER,1,50,				// MATK
-		RDMOPT_VAR_MAGICATKPERCENT,1,25,		// MATK %
-		RDMOPT_VAR_CRITICALSUCCESSVALUE,1,10,	// Crit Chance
-		RDMOPT_DAMAGE_CRI_TARGET,1,25,			// Crit Damage %
-		RDMOPT_VAR_PLUSASPD,1,3,				// ASPD Flat
-		RDMOPT_VAR_PLUSASPDPERCENT,1,10,		// ASPD %
+		RDMOPT_VAR_ATTPOWER,1,25,				// ATK
+		RDMOPT_VAR_ATKPERCENT,1,15,			// ATK %
+		RDMOPT_VAR_ATTMPOWER,1,25,				// MATK
+		RDMOPT_VAR_MAGICATKPERCENT,1,15,		// MATK %
+		RDMOPT_VAR_CRITICALSUCCESSVALUE,1,3,	// Crit Chance
+		RDMOPT_DAMAGE_CRI_TARGET,1,15,			// Crit Damage %
+		RDMOPT_VAR_PLUSASPD,1,2,				// ASPD Flat
+		RDMOPT_VAR_PLUSASPDPERCENT,1,5,		// ASPD %
 		RDMOPT_VAR_MAXHPPERCENT,1,10,			// Max HP %
 		RDMOPT_VAR_MAXSPPERCENT,1,10,			// Max SP %
-		RDMOPT_VAR_HPACCELERATION,1,50,		// HP Recovery %
-		RDMOPT_VAR_SPACCELERATION,1,50,		// SP Recovery %
+		RDMOPT_VAR_HPACCELERATION,1,25,		// HP Recovery %
+		RDMOPT_VAR_SPACCELERATION,1,25,		// SP Recovery %
 		RDMOPT_VAR_HITSUCCESSVALUE,1,25,		// HIT
-		RDMOPT_VAR_AVOIDSUCCESSVALUE,1,20,		// FLEE
-		RDMOPT_VAR_PLUSAVOIDSUCCESSVALUE,1,10,	// Perfect Dodge
-		RDMOPT_RANGE_ATTACK_DAMAGE_TARGET,1,25;// Ranged Damage +%
-setarray .RandOpt_ATT_M$[0],"STR","AGI","VIT","INT","DEX","LUK","ATK","ATK %","MATK","MATK %","Critical Chance","Critical Damage","ASPD","ASPD %","Max HP %","Max SP %","HP Recovery %","SP Recovery %","HIT","FLEE","Perfect Dodge","Ranged Damage %";
-
-// - Special
-setarray .RandOpt_Spec[0],
-		RDMOPT_HEAL_VALUE,1,25, 			// Outgoing Heal Power
-		RDMOPT_HEAL_MODIFY_PERCENT,1,25, 	// Incoming Heal Power
-		RDMOPT_WEAPON_INDESTRUCTIBLE,0,0, 	// Weapon Instructible
-		RDMOPT_BODY_INDESTRUCTIBLE,0,0, 	// Armor Instructible
+		RDMOPT_RANGE_ATTACK_DAMAGE_TARGET,1,15,// Ranged Damage +%
 		RDMOPT_DAMAGE_SIZE_PERFECT,0,0, 	// Size will be ignored
-		RDMOPT_DEC_SP_CONSUMPTION,1,25;		// Skill SP Cost -%
-setarray .RandOpt_Spec_M$[0],"Outgoing Heal Power ","Incoming Heal Power","Weapon Instructible","Armor Instructible","Ignore Size Penalty","SP Cost";
-// Limits the Special Random Options Enchantments on one Equipment to once only
-// 1 = Enabled
-// 0 = Disable
-setarray .RandOpt_Spec_Limit,1;
+		RDMOPT_DEC_SP_CONSUMPTION,1,15;		// Skill SP Cost -%
+setarray .RandOpt_ATT_M$[0],"STR","AGI","VIT","INT","DEX","LUK","ATK","ATK %","MATK","MATK %","Critical Chance","Critical Damage","ASPD","ASPD %","Max HP %","Max SP %","HP Recovery %","SP Recovery %","HIT","Ranged Damage %","Ignore Size Penalty","SP Cost";
+
 end;
 }
 
