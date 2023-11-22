@@ -16203,11 +16203,11 @@ Body:
     Name: Goat
     Level: 69
     Hp: 11077
-    BaseExp: 3357
-    JobExp: 2015
+    BaseExp: 5357
+    JobExp: 5015
     Attack: 457
     Attack2: 608
-    Defense: 44
+    Defense: 34
     MagicDefense: 25
     Agi: 58
     Vit: 66
@@ -16396,13 +16396,13 @@ Body:
     AegisName: HARPY
     Name: Harpy
     Level: 70
-    Hp: 16599
+    Hp: 11599
     BaseExp: 6562
     JobExp: 5133
     Attack: 926
     Attack2: 1231
-    Defense: 42
-    MagicDefense: 44
+    Defense: 32
+    MagicDefense: 22
     Agi: 112
     Vit: 72
     Int: 67
@@ -20553,8 +20553,8 @@ Body:
     Name: Gibbet
     Level: 58
     Hp: 6841
-    BaseExp: 4011
-    JobExp: 1824
+    BaseExp: 5011
+    JobExp: 2824
     Attack: 418
     Attack2: 656
     Defense: 28
@@ -20599,7 +20599,7 @@ Body:
     Name: Dullahan
     Level: 62
     Hp: 12437
-    BaseExp: 4517
+    BaseExp: 6517
     JobExp: 2963
     Attack: 647
     Attack2: 1065
@@ -20641,10 +20641,10 @@ Body:
     Name: Loli Ruri
     Level: 71
     Hp: 23470
-    BaseExp: 6641
-    JobExp: 4314
-    Attack: 1476
-    Attack2: 2317
+    BaseExp: 11641
+    JobExp: 8314
+    Attack: 990
+    Attack2: 1317
     Defense: 39
     MagicDefense: 44
     Agi: 66
@@ -20688,8 +20688,8 @@ Body:
     Level: 55
     Hp: 7543
     Sp: 180
-    BaseExp: 2815
-    JobExp: 1919
+    BaseExp: 4815
+    JobExp: 3919
     Attack: 279
     Attack2: 546
     Defense: 18
@@ -20736,8 +20736,8 @@ Body:
     Name: Bloody Murderer
     Level: 72
     Hp: 27521
-    BaseExp: 9742
-    JobExp: 3559
+    BaseExp: 12742
+    JobExp: 9559
     Attack: 864
     Attack2: 1081
     Defense: 37
@@ -20782,8 +20782,8 @@ Body:
     Name: Quve
     Level: 40
     Hp: 4559
-    BaseExp: 414
-    JobExp: 306
+    BaseExp: 3114
+    JobExp: 2036
     Attack: 299
     Attack2: 469
     Defense: 12
@@ -20824,8 +20824,8 @@ Body:
     Name: Lude
     Level: 36
     Hp: 3214
-    BaseExp: 392
-    JobExp: 247
+    BaseExp: 2092
+    JobExp: 2047
     Attack: 287
     Attack2: 451
     Defense: 14
@@ -20869,8 +20869,8 @@ Body:
     JapaneseName: Hylozoist
     Level: 51
     Hp: 7186
-    BaseExp: 2314
-    JobExp: 1297
+    BaseExp: 5314
+    JobExp: 2297
     Attack: 317
     Attack2: 498
     Defense: 16
@@ -20974,8 +20974,8 @@ Body:
     JapaneseName: Hyegun
     Level: 56
     Hp: 9981
-    BaseExp: 2199
-    JobExp: 1022
+    BaseExp: 4199
+    JobExp: 2022
     Attack: 710
     Attack2: 1128
     Defense: 12
@@ -21018,8 +21018,8 @@ Body:
     JapaneseName: Civil Servant
     Level: 62
     Hp: 14390
-    BaseExp: 4023
-    JobExp: 2750
+    BaseExp: 6023
+    JobExp: 4750
     Attack: 650
     Attack2: 1010
     Defense: 42
@@ -21062,8 +21062,8 @@ Body:
     JapaneseName: Dancing Dragon
     Level: 54
     Hp: 9136
-    BaseExp: 3030
-    JobExp: 769
+    BaseExp: 5030
+    JobExp: 2769
     Attack: 550
     Attack2: 789
     Defense: 39
@@ -21150,8 +21150,8 @@ Body:
     JapaneseName: Increase Soil
     Level: 51
     Hp: 8230
-    BaseExp: 2760
-    JobExp: 2110
+    BaseExp: 3760
+    JobExp: 3110
     Attack: 560
     Attack2: 700
     Defense: 30
@@ -21192,8 +21192,8 @@ Body:
     JapaneseName: Li Me Mang Ryang
     Level: 48
     Hp: 5920
-    BaseExp: 1643
-    JobExp: 1643
+    BaseExp: 3643
+    JobExp: 3643
     Attack: 434
     Attack2: 633
     Defense: 23
@@ -21282,8 +21282,8 @@ Body:
     JapaneseName: Chung E
     Level: 49
     Hp: 23900
-    BaseExp: 2396
-    JobExp: 993
+    BaseExp: 6396
+    JobExp: 2993
     Attack: 460
     Attack2: 1050
     Defense: 8
@@ -24815,8 +24815,8 @@ Body:
     JapaneseName: Chung E
     Level: 59
     Hp: 23900
-    BaseExp: 4256
-    JobExp: 920
+    BaseExp: 6256
+    JobExp: 2920
     Attack: 460
     Attack2: 1050
     Defense: 8

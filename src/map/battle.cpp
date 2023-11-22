@@ -3067,7 +3067,7 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 #ifdef RENEWAL
 	hitrate = 0; //Default hitrate
 #else
-	hitrate = 80; //Default hitrate
+	hitrate = 40 + 160 /  (20 * status_get_lv(src) / 100 + 4); //Default hitrate (CUSTOM: diminishing returns)
 #endif
 
 	if(battle_config.agi_penalty_type && battle_config.agi_penalty_target&target->type) {
@@ -3083,7 +3083,19 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 		}
 	}
 
+// printf("Flee BEFORE DR %d /", flee);
+
+//	if ((src->type == BL_MOB) && (target->type == BL_PC))
+//	{
+//		// Apply diminishing returns to flee
+//		flee = 2 * (pow(flee * 11 / 10 + 1, 0.8) - 1) / 0.85;
+//	}
+
+// printf(" AFTER DR %d |", flee);
+// printf(" Hit stat %d /", sstatus->hit);
 	hitrate += sstatus->hit - flee;
+
+// printf(" Hitrate minus Flee %d /", hitrate);
 
 	//Fogwall's hit penalty is only for normal ranged attacks.
 	if ((wd->flag&(BF_LONG|BF_MAGIC)) == BF_LONG && !skill_id && tsc && tsc->getSCE(SC_FOGWALL))
@@ -3211,8 +3223,9 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 		if (sc->getSCE(SC_MTF_ASPD2))
 			hitrate += sc->getSCE(SC_MTF_ASPD2)->val2;
 	}
-
+// printf(" Hitrate before cap %d /", hitrate);
 	hitrate = cap_value(hitrate, battle_config.min_hitrate, battle_config.max_hitrate);
+// printf(" Final Hitrate %d\n", hitrate);
 	return (rnd()%100 < hitrate);
 }
 
