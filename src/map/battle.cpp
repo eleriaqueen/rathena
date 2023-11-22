@@ -3067,7 +3067,8 @@ static bool is_attack_hitting(struct Damage* wd, struct block_list *src, struct 
 #ifdef RENEWAL
 	hitrate = 0; //Default hitrate
 #else
-	hitrate = 40 + 160 /  (20 * status_get_lv(src) / 100 + 4); //Default hitrate (CUSTOM: diminishing returns)
+//	hitrate = 40 + 160 /  (20 * status_get_lv(src) / 100 + 4); //Default hitrate (CUSTOM: diminishing returns)
+	hitrate = 80;
 #endif
 
 	if(battle_config.agi_penalty_type && battle_config.agi_penalty_target&target->type) {
