@@ -8212,8 +8212,6 @@ Body:
         Rate: 200
       - Item: Old_Blue_Box
         Rate: 100
-      - Item: Branch_Of_Dead_Tree
-        Rate: 100
       - Item: Royal_Jelly
         Rate: 250
       - Item: Panacea
@@ -8722,7 +8720,7 @@ Body:
     Race: Formless
     Element: Neutral
     ElementLevel: 3
-    WalkSpeed: 300
+    WalkSpeed: 200
     AttackDelay: 1020
     AttackMotion: 500
     DamageMotion: 768
@@ -8731,13 +8729,13 @@ Body:
       - Item: Needle_Of_Alarm
         Rate: 5335
       - Item: Clip
-        Rate: 1
+        Rate: 10
       - Item: Skull
         Rate: 1500
       - Item: Spectacles
-        Rate: 1300
+        Rate: 500
       - Item: Oridecon
-        Rate: 105
+        Rate: 250
       - Item: Key_Of_Clock_Tower
         Rate: 20
       - Item: Zargon
@@ -9013,7 +9011,7 @@ Body:
       - Item: Yellow_Gemstone
         Rate: 800
       - Item: Pacifier
-        Rate: 100
+        Rate: 1
       - Item: Starsand_Of_Witch
         Rate: 1000
       - Item: Moth_Dust
@@ -9021,7 +9019,7 @@ Body:
       - Item: Wing_Of_Fly
         Rate: 1100
       - Item: Hood_
-        Rate: 15
+        Rate: 10
       - Item: Punk_Card
         Rate: 1
         StealProtected: true
@@ -9063,7 +9061,7 @@ Body:
       - Item: Rose_Quartz
         Rate: 1500
       - Item: Tights_
-        Rate: 8
+        Rate: 100
       - Item: Earring_
         Rate: 1
       - Item: Queen's_Whip
@@ -9126,8 +9124,8 @@ Body:
     Name: Phendark
     Level: 73
     Hp: 22729
-    BaseExp: 6826
-    JobExp: 3443
+    BaseExp: 8826
+    JobExp: 5443
     Attack: 794
     Attack2: 1056
     Defense: 52
@@ -9168,8 +9166,8 @@ Body:
     Name: Mysteltainn
     Level: 76
     Hp: 33350
-    BaseExp: 6457
-    JobExp: 5159
+    BaseExp: 9457
+    JobExp: 7159
     Attack: 1160
     Attack2: 1440
     Defense: 30
@@ -9217,8 +9215,8 @@ Body:
     JapaneseName: Tirfing
     Level: 71
     Hp: 29900
-    BaseExp: 5412
-    JobExp: 4235
+    BaseExp: 8412
+    JobExp: 6235
     Attack: 950
     Attack2: 1146
     Defense: 30
@@ -9265,8 +9263,8 @@ Body:
     Name: Executioner
     Level: 65
     Hp: 28980
-    BaseExp: 4730
-    JobExp: 3536
+    BaseExp: 7730
+    JobExp: 5536
     Attack: 570
     Attack2: 950
     Defense: 35
@@ -9313,8 +9311,8 @@ Body:
     Name: Anolian
     Level: 61
     Hp: 18960
-    BaseExp: 5900
-    JobExp: 3700
+    BaseExp: 7900
+    JobExp: 6700
     Attack: 640
     Attack2: 980
     Defense: 15
@@ -9344,11 +9342,11 @@ Body:
       - Item: Royal_Jelly
         Rate: 5
       - Item: Red_Muffler
-        Rate: 10
+        Rate: 1
       - Item: Solid_Shell
         Rate: 5335
       - Item: Brooch_
-        Rate: 1
+        Rate: 2
       - Item: Oridecon
         Rate: 134
       - Item: Anolian_Card
@@ -9359,8 +9357,8 @@ Body:
     Name: Sting
     Level: 61
     Hp: 9500
-    BaseExp: 4081
-    JobExp: 2970
+    BaseExp: 5081
+    JobExp: 3970
     Attack: 850
     Attack2: 1032
     Defense: 5
@@ -9389,7 +9387,7 @@ Body:
       - Item: Stone_Arrow
         Rate: 1500
       - Item: Glove_
-        Rate: 1
+        Rate: 2
       - Item: Coal
         Rate: 130
       - Item: Great_Nature
@@ -9407,8 +9405,8 @@ Body:
     JapaneseName: Wander Man
     Level: 74
     Hp: 8170
-    BaseExp: 5786
-    JobExp: 4730
+    BaseExp: 7786
+    JobExp: 5730
     Attack: 450
     Attack2: 1170
     Defense: 5
@@ -9455,8 +9453,8 @@ Body:
     Name: Cramp
     Level: 56
     Hp: 4720
-    BaseExp: 2300
-    JobExp: 1513
+    BaseExp: 3300
+    JobExp: 2513
     Attack: 395
     Attack2: 465
     MagicDefense: 5
@@ -9546,8 +9544,8 @@ Body:
     Name: Brilight
     Level: 46
     Hp: 5562
-    BaseExp: 1826
-    JobExp: 1331
+    BaseExp: 2826
+    JobExp: 2331
     Attack: 298
     Attack2: 383
     Defense: 30
@@ -9670,7 +9668,7 @@ Body:
       - Item: Ogre_Tooth
         Rate: 2500
       - Item: Orcish_Axe
-        Rate: 10
+        Rate: 1
       - Item: Steel
         Rate: 90
       - Item: Orcish_Voucher
@@ -12132,7 +12130,7 @@ Body:
       - Item: Underground_Key
         Rate: 30
       - Item: Elunium
-        Rate: 163
+        Rate: 500
       - Item: Clock_Card
         Rate: 1
         StealProtected: true
@@ -25793,7 +25791,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 2
-    WalkSpeed: 120
+    WalkSpeed: 200
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -25840,7 +25838,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 3
-    WalkSpeed: 120
+    WalkSpeed: 200
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -25888,7 +25886,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 3
-    WalkSpeed: 120
+    WalkSpeed: 200
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -25935,7 +25933,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 2
-    WalkSpeed: 120
+    WalkSpeed: 200
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -25983,7 +25981,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 2
-    WalkSpeed: 120
+    WalkSpeed: 200
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -26030,7 +26028,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 2
-    WalkSpeed: 120
+    WalkSpeed: 200
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -26079,7 +26077,7 @@ Body:
     Race: Demihuman
     Element: Fire
     ElementLevel: 2
-    WalkSpeed: 100
+    WalkSpeed: 175
     AttackDelay: 1008
     AttackMotion: 864
     DamageMotion: 288
