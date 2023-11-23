@@ -52,28 +52,28 @@ ra_fild04,0,0,0,0	boss_monster	Atroce	1785,1,18000000,600000,1
 // ra_fild05 - Rachel Field
 //==================================================
 ra_fild05,0,0	monster	Hill Wind	1680,120
-ra_fild05,0,0	monster	Drosera	1781,30
+ra_fild05,0,0	monster	Drosera	1781,70
 
 //==================================================
 // ra_fild06 - Rachel Field
 //==================================================
 ra_fild06,0,0	monster	Hill Wind	1680,120
-ra_fild06,0,0	monster	Anopheles	1627,30
+ra_fild06,0,0	monster	Anopheles	1627,50
 ra_fild06,0,0	monster	Drosera	1781,10
 
 //==================================================
 // ra_fild07 - Rachel Field
 //==================================================
-ra_fild07,0,0	monster	Roween	1782,50
-ra_fild07,0,0	monster	Galion	1783,20
+ra_fild07,0,0	monster	Roween	1782,75
+ra_fild07,0,0	monster	Galion	1783,30
 ra_fild07,0,0	monster	Stapo	1784,10
 
 //==================================================
 // ra_fild08 - Rachel Field
 //==================================================
-ra_fild08,0,0	monster	Stapo	1784,100
-ra_fild08,0,0	monster	Drops	1113,40
-ra_fild08,0,0	monster	Drosera	1781,20
+ra_fild08,0,0	monster	Stapo	1784,120
+ra_fild08,0,0	monster	Drops	1113,25
+ra_fild08,0,0	monster	Drosera	1781,30
 
 //==================================================
 // ra_fild09 - Rachel Field

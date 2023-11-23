@@ -14329,7 +14329,7 @@ Body:
     Level: 63
     Hp: 9114
     BaseExp: 3765
-    JobExp: 1824
+    JobExp: 3024
     Attack: 845
     Attack2: 1203
     Defense: 25
@@ -14613,8 +14613,8 @@ Body:
     Name: Sea Otter
     Level: 59
     Hp: 9999
-    BaseExp: 3048
-    JobExp: 1642
+    BaseExp: 4548
+    JobExp: 3642
     Attack: 650
     Attack2: 813
     Defense: 33
@@ -25782,7 +25782,7 @@ Body:
     Agi: 35
     Vit: 52
     Int: 18
-    Dex: 79
+    Dex: 89
     Luk: 20
     AttackRange: 1
     SkillRange: 10
@@ -25791,7 +25791,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 2
-    WalkSpeed: 200
+    WalkSpeed: 190
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -25799,16 +25799,10 @@ Body:
     Drops:
       - Item: Lab_Staff_Record
         Rate: 1000
+      - Item: Red_Slim_Potion
+        Rate: 500
       - Item: Katzbalger
-        Rate: 1
-      - Item: Two_Hand_Sword_
-        Rate: 20
-      - Item: Saber_
-        Rate: 20
-      - Item: Padded_Armor_
-        Rate: 10
-      - Item: Slayer_
-        Rate: 80
+        Rate: 2
       - Item: Plate_Armor_
         Rate: 1
       - Item: Ygnizem_Card
@@ -25829,7 +25823,7 @@ Body:
     Agi: 102
     Vit: 34
     Int: 20
-    Dex: 83
+    Dex: 90
     Luk: 30
     AttackRange: 1
     SkillRange: 10
@@ -25838,7 +25832,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 3
-    WalkSpeed: 200
+    WalkSpeed: 190
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -25846,13 +25840,9 @@ Body:
     Drops:
       - Item: Armlet_Of_Prisoner
         Rate: 2000
+      - Item: Red_Slim_Potion
+        Rate: 500
       - Item: Forturn_Sword
-        Rate: 1
-      - Item: Adventurere's_Suit_
-        Rate: 40
-      - Item: Gladius_
-        Rate: 10
-      - Item: Chain_Mail_
         Rate: 2
       - Item: Ring_Of_Rogue
         Rate: 2
@@ -25877,7 +25867,7 @@ Body:
     Agi: 36
     Vit: 50
     Int: 15
-    Dex: 89
+    Dex: 100
     Luk: 60
     AttackRange: 1
     SkillRange: 10
@@ -25886,7 +25876,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 3
-    WalkSpeed: 200
+    WalkSpeed: 190
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -25894,16 +25884,12 @@ Body:
     Drops:
       - Item: Armlet_Of_Prisoner
         Rate: 1000
+      - Item: Red_Slim_Potion
+        Rate: 500
       - Item: Muffler_
-        Rate: 1
-      - Item: Buster_
-        Rate: 50
-      - Item: Battle_Axe_
-        Rate: 40
+        Rate: 20
       - Item: Mink_Coat
         Rate: 10
-      - Item: Axe_
-        Rate: 80
       - Item: Windhawk
         Rate: 10
       - Item: Armaia_Card
@@ -25924,7 +25910,7 @@ Body:
     Agi: 31
     Vit: 41
     Int: 93
-    Dex: 67
+    Dex: 89
     Luk: 30
     AttackRange: 1
     SkillRange: 10
@@ -25933,7 +25919,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 2
-    WalkSpeed: 200
+    WalkSpeed: 190
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -25941,18 +25927,12 @@ Body:
     Drops:
       - Item: Armlet_Of_Prisoner
         Rate: 500
-      - Item: Biretta_
-        Rate: 5
-      - Item: Morning_Star_
-        Rate: 50
-      - Item: Sword_Mace_
-        Rate: 20
+      - Item: Red_Slim_Potion
+        Rate: 500
       - Item: Saint_Robe_
-        Rate: 5
-      - Item: Scapulare_
         Rate: 10
       - Item: Spike
-        Rate: 1
+        Rate: 2
       - Item: Erend_Card
         Rate: 1
         StealProtected: true
@@ -25964,15 +25944,15 @@ Body:
     Hp: 7899
     BaseExp: 7090
     JobExp: 86
-    Attack: 684
-    Attack2: 904
+    Attack: 484
+    Attack2: 504
     Defense: 12
     MagicDefense: 5
     Str: 48
-    Agi: 100
+    Agi: 85
     Vit: 10
     Int: 15
-    Dex: 118
+    Dex: 110
     Luk: 40
     AttackRange: 9
     SkillRange: 10
@@ -25981,7 +25961,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 2
-    WalkSpeed: 200
+    WalkSpeed: 190
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -25989,18 +25969,14 @@ Body:
     Drops:
       - Item: Lab_Staff_Record
         Rate: 2000
+      - Item: Red_Slim_Potion
+        Rate: 500
       - Item: Kakkung_
-        Rate: 1
-      - Item: Steel_Arrow_Container
-        Rate: 100
-      - Item: Great_Bow_
         Rate: 10
-      - Item: Mantle_
-        Rate: 5
-      - Item: Sandals_
-        Rate: 30
-      - Item: Shoes_
-        Rate: 2
+      - Item: Steel_Arrow_Container
+        Rate: 200
+      - Item: Ori_Arrow_Container
+        Rate: 100
       - Item: Kavac_Card
         Rate: 1
         StealProtected: true
@@ -26018,8 +25994,8 @@ Body:
     MagicDefense: 24
     Agi: 41
     Vit: 5
-    Int: 120
-    Dex: 45
+    Int: 105
+    Dex: 55
     Luk: 10
     AttackRange: 1
     SkillRange: 10
@@ -26028,7 +26004,7 @@ Body:
     Race: Demihuman
     Element: Neutral
     ElementLevel: 2
-    WalkSpeed: 200
+    WalkSpeed: 190
     AttackDelay: 576
     AttackMotion: 432
     DamageMotion: 288
@@ -26036,18 +26012,12 @@ Body:
     Drops:
       - Item: Mementos
         Rate: 1000
+      - Item: Red_Slim_Potion
+        Rate: 500
       - Item: Staff_Of_Wing
         Rate: 1
-      - Item: Guard_
-        Rate: 5
-      - Item: Staff_
-        Rate: 50
-      - Item: Silk_Robe_
-        Rate: 10
-      - Item: Silver_Robe_
-        Rate: 30
       - Item: Clip
-        Rate: 1
+        Rate: 20
       - Item: Rawrel_Card
         Rate: 1
         StealProtected: true
@@ -26923,8 +26893,8 @@ Body:
     Name: Hill Wind
     Level: 45
     Hp: 6233
-    BaseExp: 4132
-    JobExp: 3722
+    BaseExp: 3832
+    JobExp: 3522
     Attack: 320
     Attack2: 510
     Defense: 15
@@ -26961,13 +26931,13 @@ Body:
     AegisName: GEMINI
     Name: Gemini-S58
     Level: 72
-    Hp: 57870
-    BaseExp: 22024
-    JobExp: 9442
-    Attack: 2150
-    Attack2: 3030
-    Defense: 60
-    MagicDefense: 45
+    Hp: 47870
+    BaseExp: 25024
+    JobExp: 12442
+    Attack: 800
+    Attack2: 1200
+    Defense: 25
+    MagicDefense: 15
     Str: 88
     Agi: 75
     Vit: 70
@@ -26981,7 +26951,7 @@ Body:
     Race: Formless
     Element: Water
     ElementLevel: 1
-    WalkSpeed: 200
+    WalkSpeed: 190
     AttackDelay: 1872
     AttackMotion: 360
     DamageMotion: 864
@@ -26996,8 +26966,6 @@ Body:
         Rate: 5
       - Item: Yellow_Slim_Potion
         Rate: 500
-      - Item: White_Slim_Potion
-        Rate: 400
       - Item: Cookbook08
         Rate: 6
       - Item: Stone_Of_Intelligence_
@@ -27011,8 +26979,8 @@ Body:
     JapaneseName: Removal
     Level: 55
     Hp: 10289
-    BaseExp: 3831
-    JobExp: 1278
+    BaseExp: 5831
+    JobExp: 4278
     Attack: 558
     Attack2: 797
     Defense: 5
@@ -27035,13 +27003,11 @@ Body:
     DamageMotion: 1152
     Ai: 04
     Drops:
-      - Item: Empty_Bottle
-        Rate: 5000
       - Item: Old_Steel_Plate
         Rate: 5000
       - Item: Gas_Mask
         Rate: 10
-      - Item: Nice_Sweet_Potato
+      - Item: Yellow_Slim_Potion
         Rate: 500
       - Item: Detrimindexta
         Rate: 50
@@ -30882,8 +30848,8 @@ Body:
     Name: Drosera
     Level: 46
     Hp: 7221
-    BaseExp: 2612
-    JobExp: 1022
+    BaseExp: 3612
+    JobExp: 3022
     Attack: 389
     Attack2: 589
     Defense: 10
