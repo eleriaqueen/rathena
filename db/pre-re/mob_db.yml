@@ -14137,8 +14137,8 @@ Body:
     Name: Mobster
     Level: 61
     Hp: 7991
-    BaseExp: 4424
-    JobExp: 1688
+    BaseExp: 5424
+    JobExp: 3688
     Attack: 910
     Attack2: 1128
     Defense: 41
@@ -14184,8 +14184,8 @@ Body:
     Name: Permeter
     Level: 63
     Hp: 8228
-    BaseExp: 3756
-    JobExp: 1955
+    BaseExp: 4756
+    JobExp: 2955
     Attack: 943
     Attack2: 1211
     Defense: 46
@@ -14231,8 +14231,8 @@ Body:
     Name: Assaulter
     Level: 71
     Hp: 11170
-    BaseExp: 4854
-    JobExp: 2654
+    BaseExp: 5854
+    JobExp: 4654
     Attack: 764
     Attack2: 1499
     Defense: 35
@@ -14280,8 +14280,8 @@ Body:
     Name: Solider
     Level: 70
     Hp: 12099
-    BaseExp: 4458
-    JobExp: 1951
+    BaseExp: 7058
+    JobExp: 5551
     Attack: 797
     Attack2: 979
     Defense: 57
@@ -14422,8 +14422,8 @@ Body:
     Name: Freezer
     Level: 72
     Hp: 8636
-    BaseExp: 3665
-    JobExp: 2197
+    BaseExp: 5665
+    JobExp: 4197
     Attack: 671
     Attack2: 983
     Defense: 55
@@ -14469,8 +14469,8 @@ Body:
     Name: Owl Duke
     Level: 75
     Hp: 26623
-    BaseExp: 7217
-    JobExp: 3474
+    BaseExp: 12217
+    JobExp: 10474
     Attack: 715
     Attack2: 910
     Defense: 27
@@ -14517,8 +14517,8 @@ Body:
     Name: Dragon Tail
     Level: 61
     Hp: 8368
-    BaseExp: 3587
-    JobExp: 1453
+    BaseExp: 4387
+    JobExp: 2453
     Attack: 520
     Attack2: 715
     Defense: 25
@@ -14566,8 +14566,8 @@ Body:
     Name: Spring Rabbit
     Level: 58
     Hp: 9045
-    BaseExp: 3982
-    JobExp: 1766
+    BaseExp: 4582
+    JobExp: 2866
     Attack: 585
     Attack2: 813
     Defense: 29
@@ -15940,8 +15940,8 @@ Body:
     Name: Lava Golem
     Level: 77
     Hp: 24324
-    BaseExp: 6470
-    JobExp: 3879
+    BaseExp: 10470
+    JobExp: 9879
     Attack: 1541
     Attack2: 2049
     Defense: 65
@@ -20298,8 +20298,8 @@ Body:
     Name: Wooden Golem
     Level: 51
     Hp: 9200
-    BaseExp: 1926
-    JobExp: 1353
+    BaseExp: 3226
+    JobExp: 3353
     Attack: 570
     Attack2: 657
     Defense: 32
@@ -25771,9 +25771,9 @@ Body:
     Name: Egnigem Cenia
     JapaneseName: Ygnizem
     Level: 58
-    Hp: 11200
-    BaseExp: 7870
-    JobExp: 98
+    Hp: 10200
+    BaseExp: 7370
+    JobExp: 3598
     Attack: 823
     Attack2: 1212
     Defense: 15
@@ -25813,9 +25813,9 @@ Body:
     Name: Wickebine Tres
     JapaneseName: Whikebain
     Level: 62
-    Hp: 7320
+    Hp: 8320
     BaseExp: 7204
-    JobExp: 21
+    JobExp: 3521
     Attack: 693
     Attack2: 889
     Defense: 9
@@ -25856,9 +25856,9 @@ Body:
     Name: Armeyer Dinze
     JapaneseName: Armaia
     Level: 66
-    Hp: 7110
+    Hp: 8110
     BaseExp: 7008
-    JobExp: 35
+    JobExp: 3532
     Attack: 750
     Attack2: 913
     Defense: 22
@@ -25900,9 +25900,9 @@ Body:
     Name: Errende Ebecee
     JapaneseName: Erend
     Level: 59
-    Hp: 6980
-    BaseExp: 7501
-    JobExp: 67
+    Hp: 7980
+    BaseExp: 7101
+    JobExp: 3567
     Attack: 896
     Attack2: 1159
     Defense: 7
@@ -25941,9 +25941,9 @@ Body:
     Name: Kavach Icarus
     JapaneseName: Kavac
     Level: 60
-    Hp: 7899
+    Hp: 8899
     BaseExp: 7090
-    JobExp: 86
+    JobExp: 3386
     Attack: 484
     Attack2: 504
     Defense: 12
@@ -25985,9 +25985,9 @@ Body:
     Name: Laurell Weinder
     JapaneseName: Rawrel
     Level: 61
-    Hp: 6168
-    BaseExp: 7620
-    JobExp: 30
+    Hp: 8168
+    BaseExp: 7220
+    JobExp: 3430
     Attack: 430
     Attack2: 517
     Defense: 8
@@ -26932,7 +26932,7 @@ Body:
     Name: Gemini-S58
     Level: 72
     Hp: 47870
-    BaseExp: 25024
+    BaseExp: 14024
     JobExp: 12442
     Attack: 800
     Attack2: 1200
@@ -29109,10 +29109,10 @@ Body:
     Name: Alicel
     Level: 75
     Hp: 37520
-    BaseExp: 8890
-    JobExp: 5420
-    Attack: 1800
-    Attack2: 2770
+    BaseExp: 16890
+    JobExp: 13420
+    Attack: 1210
+    Attack2: 1560
     Defense: 30
     MagicDefense: 30
     Str: 50
@@ -29158,10 +29158,10 @@ Body:
     Name: Aliot
     Level: 75
     Hp: 48290
-    BaseExp: 13020
-    JobExp: 4006
+    BaseExp: 17020
+    JobExp: 14006
     Attack: 950
-    Attack2: 2470
+    Attack2: 2070
     Defense: 35
     MagicDefense: 15
     Str: 50
@@ -29207,8 +29207,8 @@ Body:
     Name: Aliza
     Level: 69
     Hp: 19000
-    BaseExp: 6583
-    JobExp: 3400
+    BaseExp: 9583
+    JobExp: 6400
     Attack: 750
     Attack2: 1100
     Defense: 8
@@ -29254,7 +29254,7 @@ Body:
     Name: Constant
     Level: 55
     Hp: 10000
-    BaseExp: 3230
+    BaseExp: 5230
     JobExp: 116
     Attack: 460
     Attack2: 580
@@ -30573,8 +30573,8 @@ Body:
     Name: Snowier
     Level: 60
     Hp: 19230
-    BaseExp: 5882
-    JobExp: 2699
+    BaseExp: 7382
+    JobExp: 3699
     Attack: 770
     Attack2: 1347
     Defense: 22
@@ -30620,8 +30620,8 @@ Body:
     Name: Siroma
     Level: 42
     Hp: 6800
-    BaseExp: 2230
-    JobExp: 1005
+    BaseExp: 3530
+    JobExp: 2005
     Attack: 220
     Attack2: 440
     Defense: 12
@@ -30661,17 +30661,17 @@ Body:
     Name: Ice Titan
     Level: 60
     Hp: 38200
-    BaseExp: 13872
-    JobExp: 7928
-    Attack: 1090
-    Attack2: 1570
-    Defense: 71
+    BaseExp: 16872
+    JobExp: 12928
+    Attack: 1190
+    Attack2: 1370
+    Defense: 64
     MagicDefense: 15
     Str: 99
     Agi: 34
     Vit: 88
     Int: 10
-    Dex: 79
+    Dex: 89
     Luk: 29
     AttackRange: 1
     SkillRange: 10
@@ -30680,7 +30680,7 @@ Body:
     Race: Formless
     Element: Water
     ElementLevel: 3
-    WalkSpeed: 250
+    WalkSpeed: 220
     AttackDelay: 861
     AttackMotion: 660
     DamageMotion: 144
@@ -30707,9 +30707,9 @@ Body:
     Level: 55
     Hp: 12300
     BaseExp: 5758
-    JobExp: 2075
+    JobExp: 3075
     Attack: 512
-    Attack2: 612
+    Attack2: 752
     Defense: 65
     MagicDefense: 25
     Agi: 12
@@ -30724,7 +30724,7 @@ Body:
     Race: Demon
     Element: Water
     ElementLevel: 1
-    WalkSpeed: 190
+    WalkSpeed: 200
     AttackDelay: 576
     AttackMotion: 370
     DamageMotion: 270
