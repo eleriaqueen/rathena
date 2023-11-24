@@ -1,13 +1,13 @@
-version: "3.7"
+version: "1.0"
 
 services:
     db:
         image: "mariadb:bionic"
-        container_name: "rathena_db"
+        container_name: "yggtree-rathena_db"
         ports:
             - "3306:3306" # allow DB connections from host
         volumes:
-            - "rathenadb:/var/lib/mysql" # save database to local disk
+            - "yggtree-rathenadb:/var/lib/mysql" # save database to local disk
             - "../../sql-files/:/docker-entrypoint-initdb.d" # initialize db with ./sql-files
         environment:
             MYSQL_ROOT_PASSWORD: ragnarok
@@ -16,14 +16,14 @@ services:
             MYSQL_PASSWORD: ragnarok
 
     builder:
-        image: "rathena:local"
-        container_name: "rathena-builder"
-        command: "/rathena/tools/docker/builder.sh"
+        image: "yggtree-rathena:local"
+        container_name: "yggtree-rathena-builder"
+        command: "/yggtree-rathena/tools/docker/builder-start.sh"
         volumes:
-            - "../..:/rathena" # mount git repo directory inside container
-            - "./asset/inter_conf.txt:/rathena/conf/import/inter_conf.txt" # load db connection
-            - "./asset/char_conf.txt:/rathena/conf/import/char_conf.txt"   #localdev login-char relation
-            - "./asset/map_conf.txt:/rathena/conf/import/map_conf.txt"     #localdev char-map relation
+            - "../..:/yggtree-rathena" # mount git repo directory inside container
+            - "./asset/conf:/yggtree-rathena/conf/import"   #localdev conf folder relation
+            - "./asset/db:/yggtree-rathena/db/import"   #localdev db folder relation
+
         init: true # helps with signal forwarding and process reaping
         tty: true
         stdin_open: true
@@ -31,19 +31,18 @@ services:
             context: .
             dockerfile: Dockerfile
         environment:
-            BUILDER_CONFIGURE: "--enable-packetver=20211103"
-    
+            BUILDER_CONFIGURE:
+
     login:
-        image: "rathena:local"
-        container_name: "rathena-login"
-        command: sh -c "/bin/wait-for db:3306 -- /rathena/login-server"
+        image: "yggtree-rathena:local"
+        container_name: "yggtree-rathena-login"
+        command: sh -c "/bin/wait-for db:3306 -- /yggtree-rathena/login-server"
         ports:
             - "6900:6900" # login server
         volumes:
-            - "../..:/rathena" # mount git repo directory inside container
-            - "./asset/inter_conf.txt:/rathena/conf/import/inter_conf.txt" # load db connection
-            - "./asset/char_conf.txt:/rathena/conf/import/char_conf.txt"   #localdev login-char relation
-            - "./asset/map_conf.txt:/rathena/conf/import/map_conf.txt"     #localdev char-map relation
+            - "../..:/yggtree-rathena" # mount git repo directory inside container
+            - "./asset/conf:/yggtree-rathena/conf/import"   #localdev conf folder relation
+            - "./asset/db:/yggtree-rathena/db/import"   #localdev db folder relation
         init: true # helps with signal forwarding and process reaping
         tty: true
         stdin_open: true
@@ -53,16 +52,15 @@ services:
         depends_on:
             - db
     char:
-        image: "rathena:local"
-        container_name: "rathena-char"
-        command: sh -c "/bin/wait-for db:3306 -- /rathena/char-server"
+        image: "yggtree-rathena:local"
+        container_name: "yggtree-rathena-char"
+        command: sh -c "/bin/wait-for db:3306 -- /yggtree-rathena/char-server"
         ports:
             - "6121:6121" # char server
         volumes:
-            - "../..:/rathena" # mount git repo directory inside container
-            - "./asset/inter_conf.txt:/rathena/conf/import/inter_conf.txt" # load db connection
-            - "./asset/char_conf.txt:/rathena/conf/import/char_conf.txt"   #localdev login-char relation
-            - "./asset/map_conf.txt:/rathena/conf/import/map_conf.txt"     #localdev char-map relation
+            - "../..:/yggtree-rathena" # mount git repo directory inside container
+            - "./asset/conf:/yggtree-rathena/conf/import"   #localdev conf folder relation
+            - "./asset/db:/yggtree-rathena/db/import"   #localdev db folder relation
         init: true # helps with signal forwarding and process reaping
         tty: true
         stdin_open: true
@@ -72,16 +70,15 @@ services:
         depends_on:
             - login
     map:
-        image: "rathena:local"
-        container_name: "rathena-map"
-        command: sh -c "/bin/wait-for db:3306 -- /rathena/map-server"
+        image: "yggtree-rathena:local"
+        container_name: "yggtree-rathena-map"
+        command: sh -c "/bin/wait-for db:3306 -- /yggtree-rathena/map-server"
         ports:
             - "5121:5121" # map server
         volumes:
-            - "../..:/rathena" # mount git repo directory inside container
-            - "./asset/inter_conf.txt:/rathena/conf/import/inter_conf.txt" # load db connection
-            - "./asset/char_conf.txt:/rathena/conf/import/char_conf.txt"   #localdev login-char relation
-            - "./asset/map_conf.txt:/rathena/conf/import/map_conf.txt"     #localdev char-map relation
+            - "../..:/yggtree-rathena" # mount git repo directory inside container
+            - "./asset/conf:/yggtree-rathena/conf/import"   #localdev conf folder relation
+            - "./asset/db:/yggtree-rathena/db/import"   #localdev db folder relation
         init: true # helps with signal forwarding and process reaping
         tty: true
         stdin_open: true
@@ -92,4 +89,4 @@ services:
             - char
 
 volumes:
-    rathenadb:
+    yggtree-rathenadb:
