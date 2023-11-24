@@ -300,7 +300,7 @@ alberta,33,239,5	script	Kafra Teleportation#alberta	4_F_DRKAFRA01,{
 	callfunc "F_KafTeleDoram",1;
 }
 
-aldebaran,136,122,5	script	Kafra Teleportation#aldebaran	4_F_DRKAFRA01,{
+aldebaran,134,122,5	script	Kafra Teleportation#aldebaran	4_F_DRKAFRA01,{
 	callfunc "F_KafTeleDoram",2;
 }
 
