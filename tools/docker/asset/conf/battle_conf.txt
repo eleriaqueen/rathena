@@ -27,7 +27,7 @@ item_rate_heal_mvp: 500
 disp_experience: yes
 
 // Will display zeny earned (from mobs, trades, etc) (Note 1)
-disp_zeny: no
+disp_zeny: yes
 
 // Roulette
 feature.roulette: off
@@ -75,7 +75,7 @@ hide_fav_sell: yes
 // --------------
 
 // Zeny from mobs
-zeny_from_mobs: no
+zeny_from_mobs: yes
 
 // --------------
 // --  Player  --
