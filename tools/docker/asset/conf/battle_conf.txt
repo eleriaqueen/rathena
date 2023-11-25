@@ -11,6 +11,15 @@ ammo_unequip: no
 ammo_check_weapon: no
 
 // --------------
+// --- Drops  ---
+// --------------
+
+// The rate healing items are dropped (items that restore HP or SP)
+item_rate_heal: 500
+item_rate_heal_boss: 500
+item_rate_heal_mvp: 500
+
+// --------------
 // ---  Exp   ---
 // --------------
 
