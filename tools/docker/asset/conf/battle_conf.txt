@@ -1,0 +1,111 @@
+// --------------
+// --- Battle ---
+// --------------
+
+// Should ammo be unequipped when unequipping a weapon?
+// Official behavior is "yes".
+ammo_unequip: no
+
+// Should a suitable weapon be equipped when equipping ammo?
+// Official behavior is "yes".
+ammo_check_weapon: no
+
+// --------------
+// ---  Exp   ---
+// --------------
+
+// Will display experience gained from killing a monster. (Note 1)
+disp_experience: yes
+
+// Will display zeny earned (from mobs, trades, etc) (Note 1)
+disp_zeny: no
+
+// Roulette
+feature.roulette: off
+
+// --------------
+// --  Guild   --
+// --------------
+
+// When making a guild, an Emperium is consumed? (Note 1)
+guild_emperium_check: no
+
+// --------------
+// --  Homunc  --
+// --------------
+
+// Can you name a homunculus more then once? (Note 1)
+hom_rename: yes
+
+// --------------
+// --   Misc   --
+// --------------
+
+// Forging success rate. (Note 2)
+weapon_produce_rate: 200
+
+// Prepare Potion success rate. (Note 2)
+potion_produce_rate: 200
+
+// --------------
+// --  Items   --
+// --------------
+
+// Is a monster summoned via dead branch aggressive? (Note 1)
+dead_branch_active: no
+
+// --------------
+// --   Misc   --
+// --------------
+
+// Hides items from the player's favorite tab from being sold to a NPC. (Note 1)
+hide_fav_sell: yes
+
+// --------------
+// -- Monster  --
+// --------------
+
+// Zeny from mobs
+zeny_from_mobs: no
+
+// --------------
+// --  Player  --
+// --------------
+
+// The amount of HP a player will respawn with, 0 is default.
+// (Unit is in percentage of total HP, 100 is full heal of HP, 0 is respawn with 1HP total.)
+restart_hp_rate: 25
+
+// The amount of SP a player will respawn with, 0 is default.
+// (Unit is in percentage of total SP, 100 is full heal of SP, 0 is respawn with 1SP total.)
+restart_sp_rate: 25
+
+// --------------
+// --  Skill   --
+// --------------
+
+// Remove trap type
+// 0 = Aegis system : Returns 1 'Trap' item
+// 1 = Athena system : Returns all items used to deploy the trap
+skill_removetrap_type: 1
+
+// Allows players to skip menu when casting Teleport level 1
+// Menu contains two options. "Random" and "Cancel"
+skip_teleport_lv1_menu: yes
+
+// Area of Bowling Bash chain reaction (pre-renewal only)
+// 0: Use official gutter line system
+// 1: Gutter line system without demi gutter bug
+// 2-20: Area around caster (2 = 5x5, 3 = 7x7, 4 = 9x9, ..., 20 = 41x41)
+// Note: If you knock the target out of the area it will only be hit once and won't do splash damage
+bowling_bash_area: 1
+
+// Should items that you try to create be dropped if you have no space left in your inventory? (Note 1)
+// Official: no
+// Legacy rAthena logic: yes
+skill_drop_items_full: yes
+
+// Is the knockback direction for Cart Revolution always West? (Note 1)
+// On official servers it will knock the target always to the West. If disabled it will knock the target backwards.
+cart_revo_knockback: no
+
