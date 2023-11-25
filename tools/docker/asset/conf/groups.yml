@@ -39,3 +39,27 @@
 Header:
   Type: PLAYER_GROUP_DB
   Version: 1
+
+Body:
+  - Id: 0
+    # group 0 is the default group for every new account
+    Name: Player
+    Level: 0
+    Commands:
+      commands: true
+      help: true
+      rates: true
+      uptime: true
+      showdelay: true
+      exp: true
+      mobinfo: true
+      iteminfo: true
+      whodrops: true
+      hominfo: true
+      homstats: true
+      whereis: true
+      # Features
+      autoloot: true
+      alootid: true
+      autoloottype: true
+      autotrade: true
