@@ -14,20 +14,53 @@ ammo_check_weapon: no
 // --- Drops  ---
 // --------------
 
-// The rate healing items are dropped (items that restore HP or SP)
-item_rate_heal: 500
-item_rate_heal_boss: 500
-item_rate_heal_mvp: 500
+// The rate the common items are dropped (Items that are in the ETC tab, besides card)
+item_rate_common: 200
+item_rate_common_boss: 200
+item_rate_common_mvp: 200
+item_drop_common_min: 25
+item_drop_common_max: 10000
 
-// The rate at which cards are dropped
-item_rate_card: 5000
-item_rate_card_boss: 5000
-item_rate_card_mvp: 2500
-item_drop_card_max: 100
+// The rate healing items are dropped (items that restore HP or SP)
+item_rate_heal: 200
+item_rate_heal_boss: 200
+item_rate_heal_mvp: 200
+item_drop_heal_min: 25
+item_drop_heal_max: 10000
+
+// The rate at which usable items (in the item tab) other then healing items are dropped.
+item_rate_use: 200
+item_rate_use_boss: 200
+item_rate_use_mvp: 200
+item_drop_use_min: 25
+item_drop_use_max: 10000
+
+// The rate at which equipment is dropped.
+item_rate_equip: 200
+item_rate_equip_boss: 200
+item_rate_equip_mvp: 200
+item_drop_equip_min: 25
+item_drop_equip_max: 10000
+
+/ The rate at which cards are dropped
+item_rate_card: 200
+item_rate_card_boss: 200
+item_rate_card_mvp: 200
+item_drop_card_min: 25
+item_drop_card_max: 10000
 
 // --------------
 // ---  Exp   ---
 // --------------
+
+// Turn this on to allow a player to level up more than once from a kill. (Note 1)
+multi_level_up: Yes
+
+// Setting this can cap the max experience one can get per kill specified as a
+// % of the current exp bar. (Every 10 = 1.0%)
+// For example, set it to 500 and no matter how much exp the mob gives,
+// it can never give you above half of your current exp bar.
+max_exp_gain_rate: 5000
 
 // Will display experience gained from killing a monster. (Note 1)
 disp_experience: yes
