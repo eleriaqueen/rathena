@@ -53,6 +53,18 @@ item_drop_card_max: 10000
 // ---  Exp   ---
 // --------------
 
+// Rate at which exp. is given. (Note 2)
+base_exp_rate: 200
+
+// Rate at which job exp. is given. (Note 2)
+job_exp_rate: 200
+
+// MVP bonus exp rate. (Note 2)
+mvp_exp_rate: 200
+
+// Rate of base/job exp given by NPCs. (Note 2)
+quest_exp_rate: 200
+
 // Turn this on to allow a player to level up more than once from a kill. (Note 1)
 multi_level_up: Yes
 
@@ -67,6 +79,17 @@ disp_experience: yes
 
 // Will display zeny earned (from mobs, trades, etc) (Note 1)
 disp_zeny: yes
+
+// --------------
+// -- Feature  --
+// --------------
+
+// Itemlink System on informational related commands (Note 1)
+// Generates an itemlink string for an item and can be used for npctalk, message,
+// dispbottom, and broadcast commands. The result is clickable-item name just
+// like from SHIFT+Click from player's inventory/cart/equipment window.
+// Requires: 2015-11-04Ragexe or later
+feature.itemlink: off
 
 // Roulette
 feature.roulette: off
