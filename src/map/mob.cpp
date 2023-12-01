@@ -267,6 +267,12 @@ static bool mobdb_searchname_sub(uint16 mob_id, const char * const str, bool ful
 	
 	if( mobdb_checkid(mob_id) <= 0 )
 		return false; // invalid mob_id (includes clone check)
+	if( strncmp(mob->sprite.c_str(), "C1_", 3) == 0 ||
+		strncmp(mob->sprite.c_str(), "C2_", 3) == 0 ||
+		strncmp(mob->sprite.c_str(), "C3_", 3) == 0 ||
+		strncmp(mob->sprite.c_str(), "C4_", 3) == 0 ||
+		strncmp(mob->sprite.c_str(), "C5_", 3) == 0 )
+		return false; // Hide champion mobs from search result
 	if(!mob->base_exp && !mob->job_exp && !mob_has_spawn(mob_id))
 		return false; // Monsters with no base/job exp and no spawn point are, by this criteria, considered "slave mobs" and excluded from search results
 	if( full_cmp ) {
