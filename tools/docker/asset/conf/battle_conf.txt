@@ -11,6 +11,16 @@ ammo_unequip: no
 ammo_check_weapon: no
 
 // --------------
+// --- Client ---
+// --------------
+
+// Visible area size (how many squares away from a player they can see)
+area_size: 20
+
+// Maximum walk path (how many cells a player can walk going to cursor)
+max_walk_path: 22
+
+// --------------
 // --- Drops  ---
 // --------------
 
