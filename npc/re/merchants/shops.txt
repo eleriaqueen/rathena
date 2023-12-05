@@ -92,6 +92,7 @@ izlude_in,59,113,5	shop	Advanced Potion Merchant#iz	4_F_ALCHE_A,11621:-1,11622:-
 // Juno
 //=======================================================
 s_atelier,114,117,1	shop	Part-Timer#sc_yuno	92,6123:-1,6120:-1
+yuno_in01,23,34,5	shop	Advanced Potion Merchant#yu	4_F_ALCHE_A,11621:-1,11622:-1,11623:-1,11624:-1
 
 //=======================================================
 // Lighthalzen
