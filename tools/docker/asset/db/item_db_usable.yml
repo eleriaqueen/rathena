@@ -182,3 +182,54 @@ Body:
       getitem 11565,500;
       getitem 11572,500;
       getitem 22543,15;
+#=============================================================
+# 'Adventurer' Care Packages (Rebirth Achievement Reward)
+#=============================================================
+# 12265 = "Life Insurance"
+# 22979 = "Battle Manual and Bubble Gum"
+#
+#
+  - Id: 23575
+    AegisName: Adventurer_Box_1
+    Script: |
+      getitem 12265,5;
+      getitem 22979,5;
+      getitem 11566,200;
+      getitem 11572,75;
+      getitem 23576,1;
+  - Id: 23576
+    AegisName: Adventurer_Box_15
+    Script: |
+      getitem 11566,225;
+      getitem 11572,150;
+      getitem 23577,1;
+  - Id: 23577
+    AegisName: Adventurer_Box_30
+    Script: |
+      getitem 11566,250;
+      getitem 11572,200;
+      getitem 23578,1;
+  - Id: 23578
+    AegisName: Adventurer_Box_45
+    Script: |
+      getitem 11565,250;
+      getitem 11572,200;
+      getitem 23579,1;
+  - Id: 23579
+    AegisName: Adventurer_Box_60
+    Script: |
+      getitem 11565,300;
+      getitem 11572,250;
+      getitem 23580,1;
+  - Id: 23580
+    AegisName: Adventurer_Box_75
+    Script: |
+      getitem 11565,400;
+      getitem 11572,300;
+      getitem 23581,1;
+  - Id: 23581
+    AegisName: Adventurer_Box_90
+    Script: |
+      getitem 11565,500;
+      getitem 11572,350;
+
