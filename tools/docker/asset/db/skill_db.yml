@@ -165,3 +165,12 @@ Body:
     FixedCastTime: 250
     Requires:
       SpCost: 20
+  - Id: 406
+    Name: ASC_METEORASSAULT
+    Description: Meteor Assault
+    MaxLevel: 10
+    Type: Weapon
+    TargetType: Self
+    Element: Weapon
+    SplashArea: 4
+
