@@ -3,3 +3,182 @@ Header:
   Type: ITEM_DB
   Version: 3
 
+Body:
+#=============================================================
+# Care Package Health/SP Potions
+#=============================================================
+  - Id: 11565
+    AegisName: White_Potion_B
+    Weight: 1
+  - Id: 11566
+    AegisName: Yellow_Potion_B
+    Weight: 1
+  - Id: 11569
+    AegisName: Orange_Potion_B
+    Weight: 1
+  - Id: 11570
+    AegisName: Red_Potion_B
+    Weight: 1
+  - Id: 11572
+    AegisName: Blue_Potion_B
+    Weight: 1
+#=============================================================
+# Care Package ASPD Potions
+#=============================================================
+  - Id: 22542
+    AegisName: Center_Potion_B
+    Weight: 1
+  - Id: 22543
+    AegisName: Berserk_Potion_B
+    Weight: 1
+  - Id: 22544
+    AegisName: Awakening_Potion_B
+    Weight: 1
+#=============================================================
+# Standard Care Packages
+#=============================================================
+# 11570 = "[Not For Sale] Red Potion"
+# 11569 = "[Not For Sale] Orange Potion"
+# 11566 = "[Not For Sale] Yellow Potion"
+# 11565 = "[Not For Sale] White Potion"
+# 11572 = "[Not For Sale] Blue Potion"
+#
+# 22542 = "[Not For Sale] Concentration Potion"
+# 22544 = "[Not For Sale] Awakening Potion"
+# 22543 = "[Not For Sale] Berserk Potion"
+#
+# 12622 = "Reins of Mount"
+#
+  - Id: 23484
+    AegisName: Firstaid_Box_5
+    Script: |
+      getitem 11570,75;
+      getitem 11572,15;
+      getitem 22542,3;
+      getitem 23485,1;
+  - Id: 23485
+    AegisName: Firstaid_Box_10
+    Script: |
+      getitem 11570,100;
+      getitem 11572,35;
+      getitem 22542,4;
+      getitem 23486,1;
+  - Id: 23486
+    AegisName: Firstaid_Box_15
+    Script: |
+      getitem 11569,125;
+      getitem 11572,75;
+      getitem 22542,4;
+      getitem 23487,1;
+  - Id: 23487
+    AegisName: Firstaid_Box_20
+    Script: |
+      getitem 11569,150;
+      getitem 11572,150;
+      getitem 22542,5;
+      getitem 23488,1;
+  - Id: 23488
+    AegisName: Firstaid_Box_25
+    Script: |
+      getitem 11569,175;
+      getitem 11572,175;
+      getitem 22542,5;
+      getitem 23489,1;
+  - Id: 23489
+    AegisName: Firstaid_Box_30
+    Script: |
+      getitem 11569,200;
+      getitem 11572,200;
+      getitem 22542,5;
+      getitem 12622,1;
+      getitem 23490,1;
+  - Id: 23490
+    AegisName: Firstaid_Box_35
+    Script: |
+      getitem 11569,225;
+      getitem 11572,225;
+      getitem 22542,5;
+      getitem 23491,1;
+  - Id: 23491
+    AegisName: Firstaid_Box_40
+    Script: |
+      getitem 11566,250;
+      getitem 11572,250;
+      getitem 22544,5;
+      getitem 23492,1;
+  - Id: 23492
+    AegisName: Firstaid_Box_45
+    Script: |
+      getitem 11566,250;
+      getitem 11572,250;
+      getitem 22544,5;
+      getitem 23493,1;
+  - Id: 23493
+    AegisName: Firstaid_Box_50
+    Script: |
+      getitem 11566,250;
+      getitem 11572,250;
+      getitem 22544,5;
+      getitem 23494,1;
+  - Id: 23494
+    AegisName: Firstaid_Box_55
+    Script: |
+      getitem 11566,250;
+      getitem 11572,250;
+      getitem 22544,6;
+      getitem 23495,1;
+  - Id: 23495
+    AegisName: Firstaid_Box_60
+    Script: |
+      getitem 11565,275;
+      getitem 11572,275;
+      getitem 22544,7;
+      getitem 23496,1;
+  - Id: 23496
+    AegisName: Firstaid_Box_65
+    Script: |
+      getitem 11565,300;
+      getitem 11572,300;
+      getitem 22544,8;
+      getitem 23497,1;
+  - Id: 23497
+    AegisName: Firstaid_Box_70
+    Script: |
+      getitem 11565,325;
+      getitem 11572,325;
+      getitem 22544,9;
+      getitem 23498,1;
+  - Id: 23498
+    AegisName: Firstaid_Box_75
+    Script: |
+      getitem 11565,350;
+      getitem 11572,350;
+      getitem 22544,10;
+      getitem 23499,1;
+  - Id: 23499
+    AegisName: Firstaid_Box_80
+    Script: |
+      getitem 11565,400;
+      getitem 11572,400;
+      getitem 22543,12;
+      getitem 23500,1;
+  - Id: 23500
+    AegisName: Firstaid_Box_85
+    Script: |
+      getitem 11565,450;
+      getitem 11572,450;
+      getitem 22543,13;
+      getitem 23501,1;
+  - Id: 23501
+    AegisName: Firstaid_Box_90
+    Script: |
+      getitem 11565,475;
+      getitem 11572,475;
+      getitem 22543,14;
+      getitem 23502,1;
+  - Id: 23502
+    AegisName: Firstaid_Box_95
+    Script: |
+      getitem 11565,500;
+      getitem 11572,500;
+      getitem 22543,15;
