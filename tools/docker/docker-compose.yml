@@ -3,7 +3,7 @@ version: "1.0"
 services:
     db:
         image: "mariadb:bionic"
-        container_name: "yggtree-rathena_db"
+        container_name: "yggtree-rathena-db"
         ports:
             - "3306:3306" # allow DB connections from host
         volumes:
@@ -16,9 +16,10 @@ services:
             MYSQL_PASSWORD: ragnarok
 
     builder:
+        profiles: ["build"]
         image: "yggtree-rathena:local"
         container_name: "yggtree-rathena-builder"
-        command: "/yggtree-rathena/tools/docker/builder-start.sh"
+        command: "/bin/sh"
         volumes:
             - "../..:/yggtree-rathena" # mount git repo directory inside container
             - "./asset/conf:/yggtree-rathena/conf/import"   #localdev conf folder relation
@@ -31,7 +32,7 @@ services:
             context: .
             dockerfile: Dockerfile
         environment:
-            BUILDER_CONFIGURE:
+            BUILDER_CONFIGURE: "--enable-packetver=20220406"
 
     login:
         image: "yggtree-rathena:local"
@@ -90,3 +91,4 @@ services:
 
 volumes:
     yggtree-rathenadb:
+        name: "yggtree-rathenadb" # Force volume name to avoid docker prepending it with 'docker_'
