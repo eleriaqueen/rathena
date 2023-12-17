@@ -232,4 +232,27 @@ Body:
     Script: |
       getitem 11565,500;
       getitem 11572,350;
+#=============================================================
+# Syrups
+#=============================================================
+  - Id: 11621
+    AegisName: High_RedPotion
+    Script: |
+      itemheal 325,0;
+      misceffect 204;
+  - Id: 11622
+    AegisName: High_YelloPotion
+    Script: |
+      itemheal 900,0;
+      misceffect 206;
+  - Id: 11623
+    AegisName: High_WhitePotion
+    Script: |
+      itemheal 1800,0;
+      misceffect 207;
+  - Id: 11624
+    AegisName: High_BluePotion
+    Script: |
+      itemheal 0,180;
+      misceffect 208;
 
