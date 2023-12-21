@@ -17,9 +17,8 @@
 //==================================================
 // gef_dun00 - Geffen Dungeon
 //==================================================
-gef_dun00,0,0	monster	Hunter Fly	1035,30,5000
-gef_dun00,0,0	monster	Poison Spore	1077,25,5000
-gef_dun00,0,0	monster	Poporing	1031,15,5000
+gef_dun00,0,0	monster	Hunter Fly	1035,50,5000
+gef_dun00,0,0	monster	Poison Spore	1077,30,5000
 gef_dun00,91,106	monster	Red Plant	1078,1,300000,150000
 gef_dun00,92,108	monster	Yellow Plant	1081,1,300000,150000
 gef_dun00,114,106	monster	Green Plant	1080,1,300000,150000
