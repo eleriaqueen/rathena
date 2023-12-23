@@ -30,14 +30,14 @@
 // lhz_dun01 - Somatology Laboratory
 //==================================================
 lhz_dun01,0,0	monster	Remover	1682,101,5000
-lhz_dun01,0,0	monster	Anopheles	1627,70,5000
-lhz_dun01,0,0	monster	Metaling	1613,50,5000
-lhz_dun01,0,0	monster	Kavach Icarus	1656,13,5000
-lhz_dun01,0,0	monster	Errende Ebecee	1655,13,5000
-lhz_dun01,0,0	monster	Laurell Weinder	1657,11,5000
-lhz_dun01,0,0	monster	Wickebine Tres	1653,11,5000
-lhz_dun01,0,0	monster	Armeyer Dinze	1654,8,5000
-lhz_dun01,0,0	monster	Egnigem Cenia	1652,8,5000
+lhz_dun01,0,0	monster	Anopheles	1627,25,5000
+lhz_dun01,0,0	monster	Metaling	1613,25,5000
+lhz_dun01,0,0	monster	Kavach Icarus	1656,15,5000
+lhz_dun01,0,0	monster	Errende Ebecee	1655,15,5000
+lhz_dun01,0,0	monster	Laurell Weinder	1657,15,5000
+lhz_dun01,0,0	monster	Wickebine Tres	1653,15,5000
+lhz_dun01,0,0	monster	Armeyer Dinze	1654,15,5000
+lhz_dun01,0,0	monster	Egnigem Cenia	1652,15,5000
 lhz_dun01,0,0	monster	Gemini-S58	1681,1,5000
 
 //==================================================
