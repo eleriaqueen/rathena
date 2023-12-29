@@ -1,0 +1,40 @@
+enable_logs: 0x00000000
+
+// Track Cash Changes (Note 1)
+log_cash: no
+
+// Log MVP Monster Drops (Note 1)
+// Outdated. Use Pick_Log instead. But this log could be useful to keep track slayed MVPs
+log_mvpdrop: no
+
+// Log AtCommands & Charcommands (Note 1)
+// Only commands issued by player groups ('conf/groups.conf') with
+// 'log_commands' setting set to 'true' will be logged.
+log_commands: no
+
+// Log NPC 'logmes' commands (Note 1)
+log_npc: no
+
+// Log CHAT (Global, Whisper, Party, Guild, Main chat, Clan) (Note 3)
+// LOGGING FILTERS
+// =============================================================
+// 0 = Don't log at all
+// 1 - Log Global messages
+// 2 - Log Whisper messages
+// 4 - Log Party messages
+// 8 - Log Guild messages
+// 16 - Log Main chat messages
+// 32 - Log Clan messages
+// Example:
+// log_chat: 63 = logs everything
+log_chat: 0
+
+// Disable chat logging when WoE is running? (Note 1)
+log_chat_woe_disable: no
+
+// Log feeding
+// Should pet or homunculus feeding be logged? (Note 3)
+// 0: Disabled
+// 1: Pet
+// 2: Homunculus
+log_feeding: 0
