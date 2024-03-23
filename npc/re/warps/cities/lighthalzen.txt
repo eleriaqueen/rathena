@@ -8,3 +8,6 @@
 
 // Rekenber Research Institute
 rgsr_in,127,32,0	warp	rekenber_to_lhz	1,1,lighthalzen,53,275
+
+// Attunement quest bypass
+lighthalzen, 73,52,0	warp	lhz_to_biolabs	1,1,lhz_dun01,149,286
