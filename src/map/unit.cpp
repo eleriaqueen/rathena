@@ -738,7 +738,7 @@ int unit_walktoxy( struct block_list *bl, short x, short y, unsigned char flag)
 
 	walkpath_data wpd = { 0 };
 
-	if (sd && !(flag & 1)) {
+	if (ud && !(flag & 1)) {
 		// check easy path, but don't give up if it fails
 
 		if (path_search(&wpd, bl->m, bl->x, bl->y, x, y, 1, CELL_CHKNOPASS)) {
