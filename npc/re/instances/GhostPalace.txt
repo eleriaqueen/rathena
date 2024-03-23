@@ -150,8 +150,8 @@ dali02,40,134,5	script	Interdimensional Device#dk	PORTAL,{
 	end;
 
 OnInstanceInit:
-	// 1: enabled potential double spawn (official), 0: disabled
-	'bool_double_spawn = 1;
+	// 0: disabled		1: double spawn		2: triple spawn
+	'int_multiple_spawn = 2;
 
 	'map_spa$ = instance_mapname("1@spa");
 
@@ -227,7 +227,7 @@ OnTimer2000:
 	stopnpctimer;
 	end;
 OnMyMobDead1:
-	if (mobcount('map_spa$, instance_npcname("#gp_control_1") + "::OnMyMobDead1") < (1 + 'bool_double_spawn)) {
+	if (mobcount('map_spa$, instance_npcname("#gp_control_1") + "::OnMyMobDead1") < (1 + 'int_multiple_spawn)) {
 		deltimer instance_npcname("#gp_control_1") + "::OnSpawn1";	// stop double spawn if timer is running
 		addtimer 2000, instance_npcname("#gp_control_1") + "::OnSpawn1";
 	}
@@ -463,7 +463,7 @@ OnSpawn1:
 	monster 'map_spa$,54,24, "Regretful Memory",2953,1, .@label$; 	// CURSED_MEMORY
 	end;
 OnMyMobDead2:
-	if (mobcount('map_spa$, instance_npcname("#gp_control_3") + "::OnMyMobDead2") < (1 + 'bool_double_spawn)) {
+	if (mobcount('map_spa$, instance_npcname("#gp_control_3") + "::OnMyMobDead2") < (1 + 'int_multiple_spawn)) {
 		deltimer instance_npcname("#gp_control_3") + "::OnAnnounce";
 		addtimer 500, instance_npcname("#gp_control_3") + "::OnAnnounce";
 	}
@@ -562,7 +562,7 @@ OnStart:
 	monster 'map_spa$,209,218, "Cursed Gatekeeper",2949,1, .@label$;	// CURSED_SENTINEL
 	end;
 OnMyMobDead1:
-	if (mobcount('map_spa$, instance_npcname("#gp_control_4") + "::OnMyMobDead1") < (1 + 'bool_double_spawn)) {
+	if (mobcount('map_spa$, instance_npcname("#gp_control_4") + "::OnMyMobDead1") < (1 + 'int_multiple_spawn)) {
 		deltimer instance_npcname("#gp_control_4") + "::OnSpawn1";
 		addtimer 2000, instance_npcname("#gp_control_4") + "::OnSpawn1";
 	}
@@ -975,13 +975,13 @@ OnTouch_:
 	mes "Everything is now complete";
 	mes "and will vanish..";
 	close2;
-	if (isbegin_quest(1263) == 2)
+	if (isbegin_quest(1263) == 5)
 		getitem 6672,1;// Gray Shard
 	else {
 		setquest 1263;// Cursed Swordman
 		completequest 1263;
 		getexp 900000,500000;
-		getitem 6672,2;// Gray Shard
+		getitem 6672,7;// Gray Shard
 	}
 	warp "dali02",46,129;
 	end;
