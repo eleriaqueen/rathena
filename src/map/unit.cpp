@@ -738,8 +738,24 @@ int unit_walktoxy( struct block_list *bl, short x, short y, unsigned char flag)
 
 	walkpath_data wpd = { 0 };
 
-	if (!path_search(&wpd, bl->m, bl->x, bl->y, x, y, flag&1, CELL_CHKNOPASS)) // Count walk path cells
-		return 0;
+	if (sd && !(flag & 1)) {
+		// check easy path, but don't give up if it fails
+
+		if (path_search(&wpd, bl->m, bl->x, bl->y, x, y, 1, CELL_CHKNOPASS)) {
+			ud->state.walk_easy = 1;
+		} else {
+			if (path_search(&wpd, bl->m, bl->x, bl->y, x, y, flag & 1, CELL_CHKNOPASS)) {
+				ud->state.walk_easy = flag & 1;
+			}
+			else return 0;
+		}
+	}
+	else {
+		if (path_search(&wpd, bl->m, bl->x, bl->y, x, y, flag & 1, CELL_CHKNOPASS)) {
+			ud->state.walk_easy = flag & 1;
+		}
+		else return 0;
+	}
 
 	// NPCs do not need to fulfill the following checks
 	if( bl->type != BL_NPC ){
@@ -1869,7 +1885,10 @@ int unit_skilluse_id2(struct block_list *src, int target_id, uint16 skill_id, ui
 	if(ud->stepaction || ud->steptimer != INVALID_TIMER)
 		unit_stop_stepaction(src);
 	// Remember the skill request from the client while walking to the next cell
-	if(src->type == BL_PC && ud->walktimer != INVALID_TIMER && (!battle_check_range(src, target, range-1) || ignore_range)) {
+	if(src->type == BL_PC && (!battle_check_range(src, target, range) || ignore_range)) {
+		if (ud->walktimer == INVALID_TIMER) {
+			unit_walktoxy(src, target->x, target->y, 8);
+		}
 		ud->stepaction = true;
 		ud->target_to = target_id;
 		ud->stepskill_id = skill_id;
@@ -2749,6 +2768,7 @@ static int unit_attack_timer_sub(struct block_list* src, int tid, t_tick tick)
 
 	if(sd && !check_distance_client_bl(src,target,range)) {
 		// Player tries to attack but target is too far, notify client
+		clif_fixpos(src);  // synchronize the player's position with the client
 		clif_movetoattack(sd,target);
 		return 1;
 	} else if(md && !check_distance_bl(src,target,range)) {
