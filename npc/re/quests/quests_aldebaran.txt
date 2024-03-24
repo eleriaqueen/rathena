@@ -14,8 +14,8 @@
 c_tower1,232,222,5	script	Belljamin Button#ct	968,{
 	mes "[Belljamin Button]";
 	mes "The monsters here are able to control time.";
-	if( BaseLevel < 150 ){
-		mes "Come back when you've reached ^0000FFLevel 150^000000.";
+	if( BaseLevel < 145 ){
+		mes "Come back when you've reached ^0000FFLevel 145^000000.";
 		close;
 	}
 	mes "Time, memories, environments... all can become warped here.";
