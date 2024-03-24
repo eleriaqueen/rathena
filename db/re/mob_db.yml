@@ -87578,8 +87578,8 @@ Body:
     Name: Fruits Pom Spider
     Level: 150
     Hp: 156532
-    BaseExp: 8809
-    JobExp: 8954
+    BaseExp: 14809
+    JobExp: 14954
     Attack: 1137
     Attack2: 258
     Defense: 240
@@ -90941,8 +90941,8 @@ Body:
     Name: Gaster
     Level: 141
     Hp: 90574
-    BaseExp: 5080
-    JobExp: 4716
+    BaseExp: 9080
+    JobExp: 8716
     Attack: 1494
     Attack2: 231
     Defense: 191
@@ -91175,8 +91175,8 @@ Body:
     Name: Elite Buffalo Bandit
     Level: 148
     Hp: 135292
-    BaseExp: 7628
-    JobExp: 8077
+    BaseExp: 15228
+    JobExp: 16077
     Attack: 1650
     Attack2: 241
     Defense: 99
@@ -91222,8 +91222,8 @@ Body:
     Name: Elite Buffalo Bandit
     Level: 151
     Hp: 160515
-    BaseExp: 9597
-    JobExp: 9093
+    BaseExp: 17097
+    JobExp: 16093
     Attack: 1667
     Attack2: 253
     Defense: 121
@@ -91269,8 +91269,8 @@ Body:
     Name: Elite Buffalo Bandit
     Level: 152
     Hp: 174345
-    BaseExp: 9563
-    JobExp: 10217
+    BaseExp: 17063
+    JobExp: 19217
     Attack: 1749
     Attack2: 272
     Defense: 150
