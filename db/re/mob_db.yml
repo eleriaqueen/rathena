@@ -56731,7 +56731,7 @@ Body:
     Name: Nightmare Rideword
     Level: 146
     Hp: 103220
-    BaseExp: 5250
+    BaseExp: 7250
     JobExp: 8712
     Attack: 2321
     Attack2: 165
@@ -74000,8 +74000,8 @@ Body:
     Name: Big Ben
     Level: 160
     Hp: 222240
-    BaseExp: 14894
-    JobExp: 14011
+    BaseExp: 20894
+    JobExp: 20011
     Attack: 3101
     Attack2: 212
     Defense: 125
@@ -74049,8 +74049,8 @@ Body:
     Name: Big Bell
     Level: 163
     Hp: 166860
-    BaseExp: 15026
-    JobExp: 16915
+    BaseExp: 21026
+    JobExp: 22915
     Attack: 4785
     Attack2: 192
     Defense: 138
@@ -74096,8 +74096,8 @@ Body:
     Name: Time Keeper
     Level: 165
     Hp: 256000
-    BaseExp: 15796
-    JobExp: 17738
+    BaseExp: 21796
+    JobExp: 23738
     Attack: 2989
     Attack2: 280
     Defense: 127
@@ -74145,8 +74145,8 @@ Body:
     Name: Neo Punk
     Level: 155
     Hp: 154760
-    BaseExp: 11748
-    JobExp: 13237
+    BaseExp: 14748
+    JobExp: 15237
     Attack: 2051
     Attack2: 216
     Defense: 99
@@ -74192,7 +74192,7 @@ Body:
     Name: Arc Elder
     Level: 168
     Hp: 293640
-    BaseExp: 18172
+    BaseExp: 24172
     JobExp: 35065
     Attack: 2513
     Attack2: 802
@@ -74241,8 +74241,8 @@ Body:
     Name: Owl Viscount
     Level: 168
     Hp: 295240
-    BaseExp: 18172
-    JobExp: 23619
+    BaseExp: 25172
+    JobExp: 27619
     Attack: 4368
     Attack2: 900
     Defense: 113
@@ -74319,8 +74319,8 @@ Body:
     Name: Owl Marquis
     Level: 170
     Hp: 630000
-    BaseExp: 43494
-    JobExp: 27612
+    BaseExp: 52494
+    JobExp: 34612
     Attack: 1887
     Attack2: 603
     Defense: 127
