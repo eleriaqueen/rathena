@@ -1199,7 +1199,7 @@ prontera,164,304,3	duplicate(ConMessenger)	Continental Messenger#01	997,3,3
 geffen,128,90,3	duplicate(ConMessenger)	Continental Messenger#02	997,3,3
 payon,200,113,3	duplicate(ConMessenger)	Continental Messenger#03	997,3,3
 alberta,127,64,3	duplicate(ConMessenger)	Continental Messenger#04	998,3,3
-aldebaran,135,128,3	duplicate(ConMessenger)	Continental Messenger#05	998,3,3
+aldebaran,131,116,3	duplicate(ConMessenger)	Continental Messenger#05	998,3,3
 
 -	script	Continental Official	-1,{
 	if (rebirth_moc_edq > 3) {
