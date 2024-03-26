@@ -25745,7 +25745,7 @@ Body:
       - Item: Goast_Chill
         Rate: 1
       - Item: Krishna
-        Rate: 200
+        Rate: 15
       - Item: Eremes_Card
         Rate: 1
         StealProtected: true
@@ -25787,7 +25787,7 @@ Body:
       - Item: Goast_Chill
         Rate: 1
       - Item: Vecer_Axe
-        Rate: 200
+        Rate: 15
       - Item: Particles_Of_Energy3
         Rate: 1000
       - Item: Will_Of_Warrior
@@ -25835,7 +25835,7 @@ Body:
       - Item: Lab_Staff_Record
         Rate: 1000
       - Item: Croce_Staff
-        Rate: 200
+        Rate: 15
       - Item: Goast_Chill
         Rate: 1
       - Item: Hardback
@@ -25895,7 +25895,7 @@ Body:
       - Item: Goast_Chill
         Rate: 1
       - Item: Falken_Blitz
-        Rate: 200
+        Rate: 15
       - Item: Shecil_Card
         Rate: 1
         StealProtected: true
@@ -25937,7 +25937,7 @@ Body:
       - Item: Carnium
         Rate: 1
       - Item: La'cryma_Stick
-        Rate: 200
+        Rate: 15
       - Item: Particles_Of_Energy3
         Rate: 1000
       - Item: Will_Of_Warrior
