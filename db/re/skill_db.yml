@@ -10484,15 +10484,15 @@ Body:
     Element: Poison
     Duration1:
       - Level: 1
-        Time: 40000
+        Time: 360000
       - Level: 2
-        Time: 60000
+        Time: 420000
       - Level: 3
-        Time: 80000
+        Time: 480000
       - Level: 4
-        Time: 100000
+        Time: 540000
       - Level: 5
-        Time: 120000
+        Time: 600000
     Duration2:
       - Level: 1
         Time: 20000
