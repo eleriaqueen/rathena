@@ -25653,8 +25653,8 @@ Body:
     Hp: 204962
     BaseExp: 17751
     JobExp: 19661
-    Attack: 3505
-    Attack2: 1317
+    Attack: 1000
+    Attack2: 600
     Defense: 166
     MagicDefense: 12
     Str: 162
@@ -25705,8 +25705,8 @@ Body:
     Hp: 220525
     BaseExp: 16714
     JobExp: 17717
-    Attack: 3055
-    Attack2: 1171
+    Attack: 1000
+    Attack2: 500
     Defense: 122
     MagicDefense: 12
     Str: 145
@@ -25757,8 +25757,8 @@ Body:
     Hp: 378100
     BaseExp: 17055
     JobExp: 17978
-    Attack: 2762
-    Attack2: 1282
+    Attack: 800
+    Attack2: 600
     Defense: 131
     MagicDefense: 10
     Str: 158
@@ -25807,8 +25807,8 @@ Body:
     Hp: 250800
     BaseExp: 15432
     JobExp: 15457
-    Attack: 1277
-    Attack2: 3554
+    Attack: 500
+    Attack2: 1000
     Defense: 108
     MagicDefense: 93
     Str: 126
@@ -25857,8 +25857,8 @@ Body:
     Hp: 200255
     BaseExp: 16567
     JobExp: 18199
-    Attack: 3737
-    Attack2: 1248
+    Attack: 1000
+    Attack2: 500
     Defense: 76
     MagicDefense: 15
     Str: 121
@@ -25907,8 +25907,8 @@ Body:
     Hp: 209780
     BaseExp: 13484
     JobExp: 17756
-    Attack: 1089
-    Attack2: 3123
+    Attack: 500
+    Attack2: 1000
     Defense: 77
     MagicDefense: 333
     Str: 108
