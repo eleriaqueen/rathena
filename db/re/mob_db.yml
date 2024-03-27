@@ -25650,18 +25650,18 @@ Body:
     Name: Seyren Windsor
     JapaneseName: Seyren
     Level: 142
-    Hp: 204962
-    BaseExp: 17751
+    Hp: 254962
+    BaseExp: 18751
     JobExp: 19661
-    Attack: 1000
-    Attack2: 600
-    Defense: 166
+    Attack: 1200
+    Attack2: 750
+    Defense: 146
     MagicDefense: 12
     Str: 162
     Agi: 99
-    Vit: 186
+    Vit: 166
     Int: 49
-    Dex: 198
+    Dex: 178
     Luk: 55
     AttackRange: 1
     SkillRange: 10
@@ -25671,7 +25671,7 @@ Body:
     RaceGroups:
       Biolab: true
     Element: Fire
-    ElementLevel: 3
+    ElementLevel: 2
     WalkSpeed: 170
     AttackDelay: 76
     AttackMotion: 384
@@ -25702,18 +25702,18 @@ Body:
     Name: Eremes Guile
     JapaneseName: Eremes
     Level: 140
-    Hp: 220525
+    Hp: 250525
     BaseExp: 16714
     JobExp: 17717
-    Attack: 1000
-    Attack2: 500
+    Attack: 1200
+    Attack2: 750
     Defense: 122
     MagicDefense: 12
     Str: 145
     Agi: 137
     Vit: 59
     Int: 67
-    Dex: 191
+    Dex: 171
     Luk: 76
     AttackRange: 1
     SkillRange: 10
@@ -25723,7 +25723,7 @@ Body:
     RaceGroups:
       Biolab: true
     Element: Poison
-    ElementLevel: 4
+    ElementLevel: 2
     WalkSpeed: 180
     AttackDelay: 76
     AttackMotion: 384
@@ -25754,12 +25754,12 @@ Body:
     Name: Howard Alt-Eisen
     JapaneseName: Harword
     Level: 142
-    Hp: 378100
-    BaseExp: 17055
+    Hp: 308100
+    BaseExp: 18055
     JobExp: 17978
-    Attack: 800
-    Attack2: 600
-    Defense: 131
+    Attack: 1200
+    Attack2: 750
+    Defense: 121
     MagicDefense: 10
     Str: 158
     Agi: 79
@@ -25775,7 +25775,7 @@ Body:
     RaceGroups:
       Biolab: true
     Element: Water
-    ElementLevel: 4
+    ElementLevel: 2
     WalkSpeed: 180
     AttackDelay: 76
     AttackMotion: 384
@@ -25805,10 +25805,10 @@ Body:
     JapaneseName: Magaleta
     Level: 140
     Hp: 250800
-    BaseExp: 15432
-    JobExp: 15457
-    Attack: 500
-    Attack2: 1000
+    BaseExp: 16432
+    JobExp: 16457
+    Attack: 750
+    Attack2: 1200
     Defense: 108
     MagicDefense: 93
     Str: 126
@@ -25825,7 +25825,7 @@ Body:
     RaceGroups:
       Biolab: true
     Element: Holy
-    ElementLevel: 3
+    ElementLevel: 2
     WalkSpeed: 180
     AttackDelay: 1152
     AttackMotion: 384
@@ -25854,18 +25854,18 @@ Body:
     Name: Cecil Damon
     JapaneseName: Shecil
     Level: 141
-    Hp: 200255
+    Hp: 230255
     BaseExp: 16567
     JobExp: 18199
-    Attack: 1000
-    Attack2: 500
-    Defense: 76
+    Attack: 1200
+    Attack2: 750
+    Defense: 90
     MagicDefense: 15
     Str: 121
     Agi: 126
     Vit: 67
     Int: 80
-    Dex: 308
+    Dex: 248
     Luk: 42
     AttackRange: 14
     SkillRange: 10
@@ -25875,7 +25875,7 @@ Body:
     RaceGroups:
       Biolab: true
     Element: Wind
-    ElementLevel: 3
+    ElementLevel: 2
     WalkSpeed: 180
     AttackDelay: 76
     AttackMotion: 384
@@ -25904,13 +25904,13 @@ Body:
     Name: Kathryne Keyron
     JapaneseName: Katrinn
     Level: 141
-    Hp: 209780
-    BaseExp: 13484
+    Hp: 229780
+    BaseExp: 15484
     JobExp: 17756
-    Attack: 500
-    Attack2: 1000
+    Attack: 750
+    Attack2: 1200
     Defense: 77
-    MagicDefense: 333
+    MagicDefense: 210
     Str: 108
     Agi: 78
     Vit: 55
@@ -25925,7 +25925,7 @@ Body:
     RaceGroups:
       Biolab: true
     Element: Ghost
-    ElementLevel: 3
+    ElementLevel: 2
     WalkSpeed: 150
     AttackDelay: 1152
     AttackMotion: 384
