@@ -25693,7 +25693,7 @@ Body:
       - Item: Will_Of_Warrior
         Rate: 200
       - Item: Ruber
-        Rate: 100
+        Rate: 15
       - Item: Seyren_Card
         Rate: 1
         StealProtected: true
